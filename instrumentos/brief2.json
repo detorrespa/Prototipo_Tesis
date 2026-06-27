@@ -1,0 +1,352 @@
+{
+  "nombre": "BRIEF-2 Familia",
+  "version": "adaptacion_espanola_2017",
+  "descripcion": "Behavior Rating Inventory of Executive Function, 2ª edición. Versión Familia. Evalúa funciones ejecutivas en niños y adolescentes de 5 a 18 años.",
+  "rol_anotador": "psicólogo clínico infantil especializado en TDAH y en el instrumento BRIEF-2",
+  "escalas": {
+    "inhibicion": "Control de impulsos y conducta hiperactiva",
+    "supervision_conducta": "Conciencia del impacto de la propia conducta en los demás",
+    "flexibilidad": "Adaptación a cambios, tolerancia a la frustración, rigidez",
+    "control_emocional": "Regulación emocional, labilidad, reactividad",
+    "iniciativa": "Capacidad de iniciar tareas y actividades de forma autónoma",
+    "memoria_trabajo": "Atención sostenida, retención de información en tareas",
+    "planificacion": "Anticipación, organización del trabajo, resolución de problemas",
+    "supervision_tarea": "Monitorización del propio trabajo, detección de errores",
+    "organizacion_materiales": "Orden del espacio de trabajo y los materiales personales"
+  },
+  "items": [
+    {
+      "id": 1,
+      "escala": "inhibicion",
+      "texto": "Es inquieto o inquieta."
+    },
+    {
+      "id": 2,
+      "escala": "flexibilidad",
+      "texto": "Se resiste o le cuesta aceptar maneras alternativas de resolver un problema."
+    },
+    {
+      "id": 3,
+      "escala": "memoria_trabajo",
+      "texto": "Cuando se le pide que haga tres cosas, solo se acuerda de la primera o de la última."
+    },
+    {
+      "id": 4,
+      "escala": "supervision_conducta",
+      "texto": "Le cuesta darse cuenta de cómo su conducta afecta o molesta a los demás."
+    },
+    {
+      "id": 5,
+      "escala": "supervision_tarea",
+      "texto": "Su trabajo es descuidado."
+    },
+    {
+      "id": 6,
+      "escala": "control_emocional",
+      "texto": "Tiene explosiones de ira."
+    },
+    {
+      "id": 7,
+      "escala": "planificacion",
+      "texto": "Hace sus tareas o deberes sin planificarse previamente."
+    },
+    {
+      "id": 8,
+      "escala": "organizacion_materiales",
+      "texto": "No encuentra sus cosas en su habitación o en su mesa."
+    },
+    {
+      "id": 9,
+      "escala": "iniciativa",
+      "texto": "Le cuesta iniciar actividades por sí mismo o por sí misma."
+    },
+    {
+      "id": 10,
+      "escala": "inhibicion",
+      "texto": "Actúa sin haber pensado antes (es impulsivo o impulsiva)."
+    },
+    {
+      "id": 11,
+      "escala": "flexibilidad",
+      "texto": "Le cuesta acostumbrarse a situaciones nuevas (clases, grupos, amigos...)."
+    },
+    {
+      "id": 12,
+      "escala": "memoria_trabajo",
+      "texto": "Su capacidad para prestar atención tiene una duración breve."
+    },
+    {
+      "id": 13,
+      "escala": "supervision_conducta",
+      "texto": "Le cuesta ser consciente de qué cosas se le dan bien y cuáles mal."
+    },
+    {
+      "id": 14,
+      "escala": "control_emocional",
+      "texto": "Explota y se enfada o enoja por pequeñas cosas."
+    },
+    {
+      "id": 15,
+      "escala": "memoria_trabajo",
+      "texto": "Se pierde en detalles y no presta atención a lo global."
+    },
+    {
+      "id": 16,
+      "escala": "inhibicion",
+      "texto": "Se descontrola mucho más que sus compañeros."
+    },
+    {
+      "id": 17,
+      "escala": "flexibilidad",
+      "texto": "Se queda enganchado o enganchada a un tema o a una actividad."
+    },
+    {
+      "id": 18,
+      "escala": "memoria_trabajo",
+      "texto": "Se le olvida su nombre."
+    },
+    {
+      "id": 19,
+      "escala": "planificacion",
+      "texto": "Tiene problemas con tareas que requieren más de un paso."
+    },
+    {
+      "id": 20,
+      "escala": "supervision_conducta",
+      "texto": "Le cuesta darse cuenta de que ciertas acciones molestan a los demás."
+    },
+    {
+      "id": 21,
+      "escala": "planificacion",
+      "texto": "Sus trabajos escritos están escasamente organizados."
+    },
+    {
+      "id": 22,
+      "escala": "control_emocional",
+      "texto": "Pequeños detalles le hacen reaccionar de forma desmesurada."
+    },
+    {
+      "id": 23,
+      "escala": "iniciativa",
+      "texto": "Tiene buenas ideas pero no las lleva a cabo adecuadamente."
+    },
+    {
+      "id": 24,
+      "escala": "inhibicion",
+      "texto": "Habla cuando no le corresponde."
+    },
+    {
+      "id": 25,
+      "escala": "supervision_tarea",
+      "texto": "Le cuesta terminar las tareas (deberes, recados...)."
+    },
+    {
+      "id": 26,
+      "escala": "supervision_conducta",
+      "texto": "Le cuesta darse cuenta de cuándo su conducta provoca reacciones negativas en los demás."
+    },
+    {
+      "id": 27,
+      "escala": "control_emocional",
+      "texto": "Reacciona más intensamente que sus compañeros ante las situaciones."
+    },
+    {
+      "id": 28,
+      "escala": "memoria_trabajo",
+      "texto": "Le cuesta recordar las cosas, incluso durante unos pocos minutos."
+    },
+    {
+      "id": 29,
+      "escala": "supervision_tarea",
+      "texto": "Comete errores por descuidos."
+    },
+    {
+      "id": 30,
+      "escala": "inhibicion",
+      "texto": "Se levanta de su silla cuando no debe."
+    },
+    {
+      "id": 31,
+      "escala": "flexibilidad",
+      "texto": "Las situaciones nuevas le incomodan y molestan."
+    },
+    {
+      "id": 32,
+      "escala": "memoria_trabajo",
+      "texto": "Le cuesta concentrarse para hacer sus tareas, deberes..."
+    },
+    {
+      "id": 33,
+      "escala": "organizacion_materiales",
+      "texto": "Tiene mala caligrafía."
+    },
+    {
+      "id": 34,
+      "escala": "control_emocional",
+      "texto": "Tiene cambios de humor frecuentes."
+    },
+    {
+      "id": 35,
+      "escala": "planificacion",
+      "texto": "Tiene buenas ideas, pero no es capaz de ponerlas por escrito."
+    },
+    {
+      "id": 36,
+      "escala": "memoria_trabajo",
+      "texto": "Le cuesta contar hasta cuatro."
+    },
+    {
+      "id": 37,
+      "escala": "supervision_tarea",
+      "texto": "Deja todo hecho un desastre que los demás tienen que arreglar."
+    },
+    {
+      "id": 38,
+      "escala": "iniciativa",
+      "texto": "Hay que decirle que empiece una tarea, incluso aunque tenga buena disposición."
+    },
+    {
+      "id": 39,
+      "escala": "inhibicion",
+      "texto": "Actúa de modo alocado o fuera de control."
+    },
+    {
+      "id": 40,
+      "escala": "flexibilidad",
+      "texto": "Le da muchas vueltas a un mismo tema."
+    },
+    {
+      "id": 41,
+      "escala": "memoria_trabajo",
+      "texto": "Se olvida de lo que estaba haciendo."
+    },
+    {
+      "id": 42,
+      "escala": "supervision_tarea",
+      "texto": "Se olvida de repasar su trabajo para ver si cometió errores."
+    },
+    {
+      "id": 43,
+      "escala": "control_emocional",
+      "texto": "Sus rabietas, enfados y lloros son intensos pero ceden repentinamente."
+    },
+    {
+      "id": 44,
+      "escala": "planificacion",
+      "texto": "Se pierde o se agobia con tareas extensas."
+    },
+    {
+      "id": 45,
+      "escala": "organizacion_materiales",
+      "texto": "Pierde el bocadillo, los deberes, papeles con recados..."
+    },
+    {
+      "id": 46,
+      "escala": "memoria_trabajo",
+      "texto": "Necesita la ayuda de un adulto para no distraerse de su tarea."
+    },
+    {
+      "id": 47,
+      "escala": "supervision_tarea",
+      "texto": "Se olvida de entregar los deberes, incluso aunque los haya hecho."
+    },
+    {
+      "id": 48,
+      "escala": "inhibicion",
+      "texto": "Le cuesta poner freno a su comportamiento."
+    },
+    {
+      "id": 49,
+      "escala": "flexibilidad",
+      "texto": "Se resiste a cambiar las rutinas, las comidas, los lugares habituales..."
+    },
+    {
+      "id": 50,
+      "escala": "iniciativa",
+      "texto": "Le cuesta ponerse a hacer sus tareas o a estudiar."
+    },
+    {
+      "id": 51,
+      "escala": "control_emocional",
+      "texto": "Las situaciones hacen variar su humor fácilmente."
+    },
+    {
+      "id": 52,
+      "escala": "planificacion",
+      "texto": "Infraestima el tiempo que necesita para terminar una tarea."
+    },
+    {
+      "id": 53,
+      "escala": "organizacion_materiales",
+      "texto": "Se le olvida traer a casa los deberes, la libreta, los materiales..."
+    },
+    {
+      "id": 54,
+      "escala": "organizacion_materiales",
+      "texto": "No puede encontrar la puerta de casa."
+    },
+    {
+      "id": 55,
+      "escala": "iniciativa",
+      "texto": "Le cuesta tomar la iniciativa."
+    },
+    {
+      "id": 56,
+      "escala": "control_emocional",
+      "texto": "Se molesta con mucha facilidad."
+    },
+    {
+      "id": 57,
+      "escala": "planificacion",
+      "texto": "Hace sus tareas o deberes a última hora."
+    },
+    {
+      "id": 58,
+      "escala": "flexibilidad",
+      "texto": "Tiene problemas para cambiar de una actividad a otra."
+    },
+    {
+      "id": 59,
+      "escala": "iniciativa",
+      "texto": "Le cuesta ir haciendo las acciones necesarias para alcanzar una meta."
+    },
+    {
+      "id": 60,
+      "escala": "flexibilidad",
+      "texto": "Le altera un cambio de profesor o de clase."
+    },
+    {
+      "id": 61,
+      "escala": "planificacion",
+      "texto": "Le cuesta organizar actividades con sus amigos o amigas."
+    },
+    {
+      "id": 62,
+      "escala": "control_emocional",
+      "texto": "Se pone tonto o tonta con facilidad."
+    },
+    {
+      "id": 63,
+      "escala": "organizacion_materiales",
+      "texto": "Va dejando un rastro de cosas por donde va."
+    }
+  ],
+  "campos_salida": {
+    "items_detectados": "Array[int] — números de ítem observables en el texto (rango 1-63)",
+    "escalas_afectadas": "Array[string] — escalas correspondientes a los ítems detectados",
+    "nivel_alerta": "Enum — alto | moderado | bajo",
+    "nota_clinica": "String — resumen narrativo de 1-3 frases para el médico",
+    "justificacion": "String — explicación del razonamiento (auditoría)"
+  },
+  "niveles_alerta": [
+    "alto",
+    "moderado",
+    "bajo"
+  ],
+  "reglas_coherencia": {
+    "alerta_alto_min_items": 4,
+    "alerta_moderado_min_items": 2,
+    "nota_clinica_min_palabras": 10,
+    "nota_clinica_max_palabras": 120
+  }
+}

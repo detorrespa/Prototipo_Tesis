@@ -1,0 +1,12 @@
+# Entorno virtual
+.venv/
+
+# Base de datos local (se regenera con: python -m datos.seed)
+datos/*.db
+
+# Python
+__pycache__/
+*.pyc
+
+# Jupyter
+.ipynb_checkpoints/

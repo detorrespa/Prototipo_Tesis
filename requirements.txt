@@ -1,0 +1,25 @@
+# Prototipo de anotación clínica con LLM (TDAH / BRIEF-2)
+# Python 3.12 · entorno: .venv
+
+# Transporte HTTP directo a Ollama
+requests>=2.32
+
+# Acceso a datos (SQLite en desarrollo, portable a PostgreSQL)
+SQLAlchemy>=2.0
+
+# Validación y salida estructurada
+pydantic>=2.10
+
+# Backends de LLM
+langchain-ollama>=1.1     # backend "langchain"
+instructor>=1.15          # backend "instructor"
+openai>=2.0               # cliente OpenAI-compatible usado por instructor
+
+# Análisis de variabilidad y fiabilidad
+pandas>=2.2
+numpy>=1.26
+matplotlib>=3.8
+krippendorff>=0.8        # alpha inter-réplica del nivel de alerta
+
+# Cuaderno
+ipykernel>=7.0
