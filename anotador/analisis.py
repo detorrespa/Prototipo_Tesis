@@ -88,11 +88,14 @@ def _jaccard_medio(conjuntos: list[set]) -> float:
 
 def _acuerdo_modal(valores: list) -> float:
     """Fracción de valores iguales al valor más frecuente (moda)."""
-    valores = [v for v in valores if v is not None]
-    if not valores:
+    validos = [v for v in valores if v is not None and not (isinstance(v, float) and np.isnan(v))
+               and str(v).strip() != ""]
+    if not validos:
         return np.nan
-    serie = pd.Series(valores)
-    return serie.value_counts().iloc[0] / len(serie)
+    conteos = pd.Series(validos).value_counts()
+    if conteos.empty:
+        return np.nan
+    return conteos.iloc[0] / len(validos)
 
 
 def consistencia_por_grupo(df: pd.DataFrame) -> pd.DataFrame:
