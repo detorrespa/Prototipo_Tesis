@@ -20,6 +20,7 @@ clínica. En esta fase no se compara contra un "ground truth".
 
 ```
 ├── 01_backend_directo.ipynb        # POST /api/generate + parseo manual (línea base)
+├── 01b_backend_directo_reparado.ipynb  # directo + reparación de comas finales
 ├── 02_backend_langchain.ipynb      # salida estructurada con json_schema
 ├── 03_backend_tool_calling.ipynb   # function calling vía /api/chat
 ├── 04_backend_instructor.ipynb     # Pydantic con reintentos automáticos
@@ -110,6 +111,7 @@ los cuadernos.
 | Cuaderno | Backend | Cómo pide la salida estructurada |
 |----------|---------|----------------------------------|
 | 01 | `directo` | `POST /api/generate` y extraer el JSON del texto. Frágil a propósito: es la línea base. |
+| 01b | `directo_reparado` | Igual que 01, pero reparando comas finales antes de parsear. Mide qué fracción de los fallos del directo son errores triviales de sintaxis. |
 | 02 | `langchain` | `ChatOllama` + `with_structured_output(method="json_schema")`: el esquema se impone al decodificar. |
 | 03 | `tool_calling` | `POST /api/chat` con `tools`: el modelo invoca una función con los argumentos ya estructurados. |
 | 04 | `instructor` | Cliente OpenAI-compatible + Pydantic: valida la salida y reintenta si falla. |
