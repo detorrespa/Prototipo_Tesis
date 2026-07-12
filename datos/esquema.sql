@@ -91,3 +91,28 @@ CREATE TABLE IF NOT EXISTS referencia_sintetica (
     nota_clinica       TEXT
 );
 
+
+-- experimento: resultados de los cuadernos 01-04. Cada fila es una anotación
+-- producida por el modelo, identificada por un código de experimento para
+-- poder comparar configuraciones entre sí (cuaderno 05).
+CREATE TABLE IF NOT EXISTS experimento (
+    id                INTEGER PRIMARY KEY,
+    codigo            TEXT NOT NULL,      -- código del experimento (p. ej. directo-s1-t0.7-20260712)
+    creada_en         TEXT NOT NULL,
+    backend           TEXT NOT NULL,      -- directo | langchain | tool_calling | instructor
+    modelo            TEXT NOT NULL,
+    temperatura       REAL NOT NULL,
+    semana            INTEGER,
+    id_paciente       TEXT,
+    id_entrada        INTEGER,
+    repeticion        INTEGER,
+    formato_ok        INTEGER,            -- 0/1: la salida fue JSON válido
+    items_detectados  TEXT,               -- JSON: [int]
+    escalas_afectadas TEXT,               -- JSON: [str]
+    nivel_alerta      TEXT,
+    nota_clinica      TEXT,
+    justificacion     TEXT,
+    latencia_s        REAL
+);
+
+CREATE INDEX IF NOT EXISTS idx_experimento_codigo ON experimento(codigo);

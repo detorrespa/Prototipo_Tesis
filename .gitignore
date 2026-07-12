@@ -1,7 +1,7 @@
 # Entorno virtual
 .venv/
 
-# Base de datos local (se regenera con: python -m datos.seed)
+# Base de datos local (se comparte por Synology Drive, no por git)
 datos/*.db
 
 # Python
