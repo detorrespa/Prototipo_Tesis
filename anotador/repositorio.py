@@ -13,7 +13,7 @@ import json
 from sqlalchemy import select
 
 from anotador.config import Config
-from anotador.db import Anotacion, Entrada, Session
+from anotador.db import Anotacion, Entrada, ReferenciaSintetica, Session
 from anotador.modelos import Mensaje
 
 
@@ -49,6 +49,37 @@ def listar_entradas() -> list[Mensaje]:
     with Session() as s:
         ids = s.execute(select(Entrada.id_entrada).order_by(Entrada.id_entrada)).scalars().all()
     return [cargar_entrada(i) for i in ids]
+
+
+def semanas_disponibles() -> list[int]:
+    """Semanas de seguimiento presentes en el dataset (vía referencia_sintetica).
+
+    El dataset sintético es longitudinal: cada paciente aporta una entrada por
+    semana. La semana vive en `referencia_sintetica`, ligada 1:1 a `entrada`.
+    """
+    with Session() as s:
+        semanas = s.execute(
+            select(ReferenciaSintetica.semana)
+            .where(ReferenciaSintetica.semana.is_not(None))
+            .distinct()
+            .order_by(ReferenciaSintetica.semana)
+        ).scalars().all()
+    return list(semanas)
+
+
+def ids_entradas_semana(semana: int) -> list[int]:
+    """Ids de las entradas de una semana concreta (todos los pacientes).
+
+    Es la unidad natural del experimento: la anotación del reporte semanal.
+    Cada semana aporta tantas entradas como pacientes tenga el dataset.
+    """
+    with Session() as s:
+        ids = s.execute(
+            select(ReferenciaSintetica.id_entrada)
+            .where(ReferenciaSintetica.semana == semana)
+            .order_by(ReferenciaSintetica.id_entrada)
+        ).scalars().all()
+    return list(ids)
 
 
 def guardar_anotacion(

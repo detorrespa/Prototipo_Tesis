@@ -35,7 +35,11 @@ Aviso importante: los datos de pacientes son **sintéticos** no tienen validez c
 │   └── brief2.json           # El instrumento BRIEF-2
 ├── data/                     # Dataset sintético de partida (JSON)
 ├── prototipo_anotador_tdah.ipynb   # El cuaderno original, paso a paso
-├── simulaciones.ipynb              # El cuaderno donde lanzo los experimentos
+├── 01_backend_directo.ipynb        # Experimento del backend directo
+├── 02_backend_langchain.ipynb      # Experimento del backend langchain
+├── 03_backend_tool_calling.ipynb   # Experimento del backend tool_calling
+├── 04_backend_instructor.ipynb     # Experimento del backend instructor
+├── 05_comparacion_backends.ipynb   # Comparación (solo lee la BD)
 ├── requirements.txt
 └── README.md
 ```
@@ -80,7 +84,32 @@ print(r.metodo, r.formato_ok, r.anotacion)
 "
 ```
 
-Para los experimentos completos, el sitio es `simulaciones.ipynb`.
+Para los experimentos completos, los cuadernos `01` a `05` (ver siguiente sección).
+
+## Los cuadernos del experimento
+
+Un cuaderno por backend, todos con la misma estructura, y un quinto que compara.
+La unidad del experimento es **la anotación del reporte semanal**: el dataset es
+longitudinal (30 pacientes × 24 semanas) y la simulación va semana a semana, no
+sobre el conjunto de entradas como si fueran intercambiables.
+
+| Cuaderno | Qué hace |
+|----------|----------|
+| `01_backend_directo.ipynb` | Simula y mide el backend `directo` semana a semana. |
+| `02_backend_langchain.ipynb` | Lo mismo con `langchain` (json_schema). |
+| `03_backend_tool_calling.ipynb` | Lo mismo con `tool_calling`. |
+| `04_backend_instructor.ipynb` | Lo mismo con `instructor` (Pydantic + reintentos). |
+| `05_comparacion_backends.ipynb` | No llama al modelo: lee la tabla `anotacion` y cruza los cuatro. |
+
+Cada cuaderno de backend sigue los mismos pasos: (1) configuración en una sola
+celda, (2) una anotación de ejemplo para ver la salida, (3) simulación semana a
+semana, (4) análisis de **solo esa simulación** (`cargar_df(backend=...,
+desde=inicio)`), (5) fiabilidad por semana (Jaccard, acuerdo de nivel, alpha de
+Krippendorff) y (6) lectura del resultado. Los cuatro pueden ejecutarse en
+cualquier orden y son independientes entre sí.
+
+La versión anterior del experimento (un solo cuaderno `simulaciones.ipynb` con
+la rejilla factorial completa) está en la rama `version-1`.
 
 ## Las tablas
 
@@ -150,11 +179,15 @@ Para mirar los resultados:
 ```python
 from anotador.analisis import (
     cargar_df, consistencia_por_grupo, resumen_por_parametro, krippendorff_nivel,
+    resumen_por_semana, krippendorff_por_semana,
 )
-df = cargar_df()                       # todas las filas, con el JSON ya parseado
+df = cargar_df()                       # todas las filas, con semana y paciente
+df = cargar_df(backend="langchain", desde=inicio)  # solo una simulación
 consistencia_por_grupo(df)             # consistencia por (entrada × config)
 resumen_por_parametro(df, "backend")   # efecto de un parámetro
+resumen_por_semana(df)                 # fiabilidad semana a semana
 krippendorff_nivel(df)                 # fiabilidad entre réplicas del nivel
+krippendorff_por_semana(df)            # el alpha, semana a semana
 ```
 
 También se puede abrir `datos/anotador.db` con DB Browser for SQLite o la extensión SQLite de VS Code, o consultarlo desde la terminal con `sqlite3`.
@@ -174,7 +207,7 @@ Para reducir la variabilidad uso el voto mayoritario (`consenso.py`,`pipeline.an
 
 | Qué | Dónde |
 |-----|-------|
-| Los parámetros del experimento | El bloque `Rejilla(...)` en `simulaciones.ipynb`. |
+| Los parámetros del experimento | La celda de configuración de cada cuaderno `0X_backend_*.ipynb`. |
 | Una ejecución suelta | `Config(backend=..., modelo=..., temperature=..., seed=...)`. |
 | Modelo por defecto | Variable de entorno `OLLAMA_MODEL`. |
 | Puerto / host de Ollama | `OLLAMA_PORT` (11002 por defecto), `OLLAMA_HOST_IP`. |
