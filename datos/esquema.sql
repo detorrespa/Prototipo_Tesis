@@ -112,7 +112,8 @@ CREATE TABLE IF NOT EXISTS experimento (
     nivel_alerta      TEXT,
     nota_clinica      TEXT,
     justificacion     TEXT,
-    latencia_s        REAL
+    latencia_s        REAL,
+    respuesta_cruda   TEXT                -- texto bruto del modelo (auditoría)
 );
 
 CREATE INDEX IF NOT EXISTS idx_experimento_codigo ON experimento(codigo);
