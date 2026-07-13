@@ -2,16 +2,20 @@
 
 Prototipo de la tesis doctoral sobre TDAH con LLMs.
 
-La idea central: tomar lo que escriben los padres o las madres sobre su hijo
-(texto libre) y convertirlo en una anotación clínica ordenada según el
-instrumento BRIEF-2: qué ítems aparecen, qué escalas se ven afectadas, un nivel
-de alerta y una nota para el médico. La conversión la hace un modelo de
+El objetivo es investigar cómo los modelos LLM pueden ayudar al médico en el
+seguimiento del TDAH: los padres o las madres anotan sobre su hijo (texto libre)
+y el sistema lo convierte en una anotación clínica ordenada según un instrumento
+(por ejemplo BRIEF-2): qué ítems aparecen, qué escalas se ven afectadas, un
+nivel de alerta y una nota para el médico. La conversión la hace un modelo de
 lenguaje en local con Ollama.
 
 Como los modelos son probabilísticos, el mismo texto puede dar anotaciones
 distintas en ejecuciones distintas. Cada cuaderno lanza un **experimento**
 (anotar las entradas de una semana varias veces) y guarda los resultados en la
 base de datos con un código, para poder comparar configuraciones entre sí.
+
+Los datos de pacientes son **sintéticos**, sin validez clínica. En esta fase no
+se compara contra un ground truth.
 
 ## Estructura del proyecto
 
@@ -32,9 +36,9 @@ base de datos con un código, para poder comparar configuraciones entre sí.
 └── README.md
 ```
 
-Los cuadernos son **independientes y autocontenidos**: no hay paquete de
-Python que importar. Cada uno lleva dentro todo lo que usa (lectura de la BD,
-prompts, backend, guardado), y se lee de arriba abajo.
+Los cuadernos son **independientes y autocontenidos**: no hay paquete de Python
+que importar. Cada uno lleva dentro todo lo que usa (lectura de la BD, prompts,
+backend, guardado), y se lee de arriba abajo.
 
 ## Cómo funciona cada cuaderno (01–04)
 
@@ -45,7 +49,7 @@ al modelo (el backend):
 
 ```python
 SEMANA       = 1            # semana de seguimiento (el dataset llega a la 24)
-PACIENTES    = None         # None = todos; o lista: ["P001", "P003"]
+PACIENTES    = None         # None = todos; o lista: ["PAC001", "PAC003"]
 REPETICIONES = 3            # veces que se anota cada entrada
 TEMPERATURA  = 0.7
 MODELO       = "gemma4:e4b"
@@ -57,12 +61,44 @@ MODELO       = "gemma4:e4b"
 4. **Backend** — la función `anotar()`, la única parte distinta entre cuadernos.
 5. **Una anotación de ejemplo** — para ver la salida antes de lanzar nada.
 6. **El experimento** — entradas × repeticiones, cada resultado a la tabla
-   `experimento` con un código (p. ej. `directo-s1-t0.7-20260712`).
+   `experimento` con un código (p. ej. `directo-s1-t0.7-20260713`).
 7. **Resultados** — formato válido, acuerdo del nivel de alerta entre
    repeticiones y latencia.
 
-El cuaderno **05** no llama al modelo: lee la tabla `experimento` y compara los
-experimentos guardados por sus códigos (estabilidad frente a coste).
+Cada fila guarda también `respuesta_cruda` (texto exacto del modelo) para
+diagnosticar fallos de formato después, sin volver a llamar a Ollama.
+
+Para relanzar un experimento: borrar filas con el mismo `codigo` o cambiar el
+código antes de ejecutar de nuevo.
+
+## Cuaderno 05 · Comparación de experimentos
+
+No llama al modelo. Lee la tabla `experimento` y compara los backends guardados
+por los cuadernos 01–04.
+
+1. **Catálogo** — lista los experimentos en la BD con índice `i`.
+2. **Selección** — `SELECCION = [0, 1, 2, 3]` elige qué experimentos comparar.
+3. **Tabla comparativa** — una fila por experimento:
+
+| Columna | Qué mide |
+|---------|----------|
+| `formato_ok` | Fracción de anotaciones con JSON válido (por repetición). |
+| `pct_formato_3` | % de pacientes con `formato_ok = 1` en las 3 repeticiones. |
+| `pct_nivel_3` | % de pacientes con el mismo `nivel_alerta` en las 3. |
+| `pct_items_3` | % de pacientes con los mismos `items_detectados` en las 3. |
+| `pct_escalas_3` | % de pacientes con las mismas `escalas_afectadas` en las 3. |
+| `pct_estable` | % de pacientes que cumplen **las cuatro** condiciones anteriores. |
+| `acuerdo_nivel` | Media del acuerdo gradual del nivel (1.0 = las 3 iguales; 0.67 = 2 de 3). |
+| `latencia_media` | Segundos por anotación. |
+
+Un paciente es **inestable** si falla cualquiera de las cuatro condiciones
+(formato, nivel, ítems o escalas). `acuerdo_nivel` solo mira el nivel y puede
+ser 1.0 aunque el paciente sea inestable por ítems o escalas.
+
+4. **Gráfico** — `pct_estable` frente a `latencia_media`.
+5. **Detalle por paciente** — cabecera visible (estable / inestable, fallos) y
+   desplegable con tabla ancha `rep0 | rep1 | rep2` por campo. Los inestables
+   quedan abiertos por defecto. Cambiar `IDX_EXPERIMENTO` para otro backend.
 
 ## La tabla `experimento`
 
@@ -75,8 +111,10 @@ en `datos/esquema.sql`). Las columnas clave:
 | `backend`, `modelo`, `temperatura`, `semana` | La configuración usada. |
 | `id_paciente`, `id_entrada`, `repeticion` | Qué se anotó y en qué réplica. |
 | `formato_ok` | Si la salida fue un JSON válido. |
-| `items_detectados`, `escalas_afectadas`, `nivel_alerta`, `nota_clinica` | La anotación. |
+| `items_detectados`, `escalas_afectadas`, `nivel_alerta` | La anotación estructurada. |
+| `nota_clinica`, `justificacion` | Texto para el médico y razonamiento del modelo. |
 | `latencia_s` | Coste en segundos. |
+| `respuesta_cruda` | Texto bruto del modelo (auditoría de fallos JSON). |
 
 También se puede consultar con DB Browser for SQLite, la extensión SQLite de
 VS Code o `sqlite3` en la terminal.
@@ -112,8 +150,6 @@ los cuadernos.
 | 02 | `langchain` | `ChatOllama` + `with_structured_output(method="json_schema")`: el esquema se impone al decodificar. |
 | 03 | `tool_calling` | `POST /api/chat` con `tools`: el modelo invoca una función con los argumentos ya estructurados. |
 | 04 | `instructor` | Cliente OpenAI-compatible + Pydantic: valida la salida y reintenta si falla. |
-
-
 
 ## Límites de esta fase
 
