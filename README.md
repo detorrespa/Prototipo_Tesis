@@ -13,9 +13,6 @@ distintas en ejecuciones distintas. Cada cuaderno lanza un **experimento**
 (anotar las entradas de una semana varias veces) y guarda los resultados en la
 base de datos con un código, para poder comparar configuraciones entre sí.
 
-Aviso importante: los datos de pacientes son **sintéticos**, sin validez
-clínica. En esta fase no se compara contra un "ground truth".
-
 ## Estructura del proyecto
 
 ```
@@ -116,12 +113,7 @@ los cuadernos.
 | 03 | `tool_calling` | `POST /api/chat` con `tools`: el modelo invoca una función con los argumentos ya estructurados. |
 | 04 | `instructor` | Cliente OpenAI-compatible + Pydantic: valida la salida y reintenta si falla. |
 
-## Dónde está lo demás
 
-La versión anterior del prototipo —paquete `anotador/` completo, el
-experimento factorial con `Rejilla`, el consenso por voto mayoritario, las
-métricas psicométricas (Jaccard, alpha de Krippendorff) y los scripts de
-generación de la base de datos— está íntegra en la rama **`version-1`**.
 
 ## Límites de esta fase
 
