@@ -35,8 +35,12 @@ no se compara contra un ground truth.
 │   └── brief2.json                 # el instrumento BRIEF-2 (63 ítems, 9 escalas)
 ├── datos/
 │   ├── esquema.sql                 # referencia de las tablas
+│   ├── importar_notas.py           # carga el dataset de notas en la BD
 │   └── anotador.db                 # la base SQLite (NO está en git, ver abajo)
-├── data/                           # dataset sintético de partida (JSON)
+├── data/
+│   ├── notas_diario.json           # dataset de notas de diario (5 pacientes, 92 notas)
+│   ├── pacientes_contexto.json     # contexto de los 5 pacientes
+│   └── referencia_sintetica.json   # dataset semanal original (30 pacientes × 24 semanas)
 ├── requirements.txt
 └── README.md
 ```
@@ -128,7 +132,34 @@ curl http://localhost:11002/api/tags
 **La base de datos** (`datos/anotador.db`) no está en git: contiene las tablas
 de pacientes/notas del dataset sintético y los resultados acumulados. Se
 comparte por Synology Drive; hay que copiarla en `datos/` antes de ejecutar
-los cuadernos.
+los cuadernos. Las notas de diario se cargan (o recargan) con:
+
+```bash
+python datos/importar_notas.py
+```
+
+## El dataset de notas de diario
+
+`data/notas_diario.json` contiene **92 notas espontáneas de cuidadores** sobre
+5 pacientes sintéticos, reescritas como entradas de diario a partir del
+dataset semanal original (`referencia_sintetica.json`, 30 pacientes × 24
+semanas). Es el formato que pide el flujo de trabajo: los cuidadores escriben
+cuando quieren, con **cadencia irregular**.
+
+| Paciente | Edad | Escenario | Cuidador(es) | Cadencia |
+|----------|------|-----------|--------------|----------|
+| PAC001 | 7 | Arco clásico: pre-medicación → MTF → estabilización | Madre | Metódica, ~3 notas/semana |
+| PAC005 | 8 | Dos hogares, adherencia irregular interparental | Madre y padre | Madre regular, padre escaso |
+| PAC013 | 10 | Sin medicación → decisión → inicio MTF | Padre | Poco metódico, **semanas vacías** |
+| PAC017 | 11 | Tics por MTF → transición a atomoxetina | Madre | Ráfagas en crisis, calma después |
+| PAC022 | 14 | Resistencia adolescente → psicoeducación → adherencia | Madre | Irregular |
+
+Cada nota lleva `ref_items`: los ítems BRIEF-2 que el texto expresa (ground
+truth sintético, para validación futura). **El anotador no los recibe** — el
+importador los guarda en la tabla `referencia_sintetica`, separada de lo que
+lee el cuaderno. Un 26 % de las notas no expresa ningún ítem a propósito
+(insomnio, gestiones médicas, días buenos): son los casos negativos con los
+que comprobar que el anotador no inventa.
 
 ## Por qué el backend es LangChain (json_schema)
 

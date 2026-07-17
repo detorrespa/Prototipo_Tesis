@@ -1,0 +1,83 @@
+{
+ "pacientes": [
+  {
+   "patient_id": "PAC001",
+   "nombre": "Marco Fernández García",
+   "fecha_nacimiento": "2016-06-15",
+   "sexo": "masculino",
+   "rango_edad": "infantil_6_9",
+   "curso": "2º Educación Primaria",
+   "medicacion": "Metilfenidato IR 10mg (inicio semana 5)",
+   "cuidadores": [
+    {
+     "relacion": "madre",
+     "nombre": "Carmen García López"
+    }
+   ]
+  },
+  {
+   "patient_id": "PAC005",
+   "nombre": "Diego Moreno Castillo",
+   "fecha_nacimiento": "2015-04-20",
+   "sexo": "masculino",
+   "rango_edad": "infantil_6_9",
+   "curso": "3º Educación Primaria",
+   "medicacion": "Metilfenidato OROS 18mg (previo al seguimiento)",
+   "cuidadores": [
+    {
+     "relacion": "madre",
+     "nombre": "Ana Castillo Ruiz"
+    },
+    {
+     "relacion": "padre",
+     "nombre": "Javier Moreno Sanz"
+    }
+   ]
+  },
+  {
+   "patient_id": "PAC013",
+   "nombre": "Andrés Gil Fernández",
+   "fecha_nacimiento": "2013-09-05",
+   "sexo": "masculino",
+   "rango_edad": "preadolescente_10_12",
+   "curso": "5º Educación Primaria",
+   "medicacion": "Metilfenidato OROS 18mg (inicio semana 6, antes solo conductual)",
+   "cuidadores": [
+    {
+     "relacion": "padre",
+     "nombre": "Javier Gil Soto"
+    }
+   ]
+  },
+  {
+   "patient_id": "PAC017",
+   "nombre": "Samuel Vega Castro",
+   "fecha_nacimiento": "2012-11-30",
+   "sexo": "masculino",
+   "rango_edad": "preadolescente_10_12",
+   "curso": "6º Educación Primaria",
+   "medicacion": "Atomoxetina 40mg (transición desde MTF IR por tics, semana 5)",
+   "cuidadores": [
+    {
+     "relacion": "madre",
+     "nombre": "Lucía Castro Vidal"
+    }
+   ]
+  },
+  {
+   "patient_id": "PAC022",
+   "nombre": "Diego Ríos Castellano",
+   "fecha_nacimiento": "2009-08-12",
+   "sexo": "masculino",
+   "rango_edad": "adolescente_13_17",
+   "curso": "3º ESO",
+   "medicacion": "Metilfenidato OROS 18mg (adherencia irregular inicial)",
+   "cuidadores": [
+    {
+     "relacion": "madre",
+     "nombre": "Sofía Castellano Díaz"
+    }
+   ]
+  }
+ ]
+}

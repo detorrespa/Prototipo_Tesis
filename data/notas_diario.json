@@ -1,0 +1,1720 @@
+{
+ "dataset_metadata": {
+  "nombre": "TDAH Notas de Diario — dataset sintético v1",
+  "descripcion": "Notas espontáneas de cuidadores (entradas de diario, cadencia irregular) reescritas desde el dataset semanal referencia_sintetica v02. Cada nota lleva ref_items: los ítems BRIEF-2 que expresa (ground truth sintético para validación futura; el anotador NO los recibe).",
+  "fecha_creacion": "2026-07-17",
+  "origen": "data/referencia_sintetica.json (30 pacientes x 24 semanas)",
+  "num_pacientes": 5,
+  "num_notas": 92,
+  "nota_uso": "Datos 100% sintéticos, sin validez clínica."
+ },
+ "notas": [
+  {
+   "nota_id": "PAC001-n001",
+   "patient_id": "PAC001",
+   "cuidador": {
+    "relacion": "madre",
+    "nombre": "Carmen García López"
+   },
+   "fecha": "2024-01-08T21:40",
+   "texto": "Hoy imposible desayunar. Marco no aguantaba sentado, se levantaba de la silla cada dos por tres, literalmente saltando. Le pedí que recogiera la mochila, me dijo que sí y al momento estaba jugando con el perro. Así llevamos desde que empezó el cole después de vacaciones.",
+   "ref_items": [
+    1,
+    30
+   ],
+   "ref": {
+    "semana": 1,
+    "fase": "pre_medicacion",
+    "adherencia": "sin_medicacion"
+   }
+  },
+  {
+   "nota_id": "PAC001-n002",
+   "patient_id": "PAC001",
+   "cuidador": {
+    "relacion": "madre",
+    "nombre": "Carmen García López"
+   },
+   "fecha": "2024-01-10T14:05",
+   "texto": "Me acaba de escribir la tutora. En el recreo Marco ha empujado a otro niño sin querer porque iba corriendo por los pasillos. No lo hace con mala intención, es que no se da cuenta de lo que hace ni de cómo afecta a los demás. Me da mucha pena porque luego él no sabe ni explicarlo.",
+   "ref_items": [
+    10,
+    4
+   ],
+   "ref": {
+    "semana": 1,
+    "fase": "pre_medicacion",
+    "adherencia": "sin_medicacion"
+   }
+  },
+  {
+   "nota_id": "PAC001-n003",
+   "patient_id": "PAC001",
+   "cuidador": {
+    "relacion": "madre",
+    "nombre": "Carmen García López"
+   },
+   "fecha": "2024-01-12T20:55",
+   "texto": "Otra tarde de batalla con las tareas. Le he dicho tres cosas: primero matemáticas, luego lengua, luego el dibujo. Pues se acuerda de la primera y de la última, y lo de en medio se le va siempre. Todos los días igual. Estoy agotada.",
+   "ref_items": [
+    3
+   ],
+   "ref": {
+    "semana": 1,
+    "fase": "pre_medicacion",
+    "adherencia": "sin_medicacion"
+   }
+  },
+  {
+   "nota_id": "PAC001-n004",
+   "patient_id": "PAC001",
+   "cuidador": {
+    "relacion": "madre",
+    "nombre": "Carmen García López"
+   },
+   "fecha": "2024-01-16T17:30",
+   "texto": "Hoy me ha llamado la seño de plástica. Marco le ha tirado la caja de pinturas a un compañero sin que nadie le provocara. Él mismo no sabía explicar por qué lo había hecho, creo que de verdad actuó sin pensar. En casa ha estado llorando un buen rato, muy arrepentido. Pero claro, ya estaba hecho. Esto no es normal comparado con los demás niños de su clase.",
+   "ref_items": [
+    10,
+    16
+   ],
+   "ref": {
+    "semana": 2,
+    "fase": "pre_medicacion",
+    "adherencia": "sin_medicacion"
+   }
+  },
+  {
+   "nota_id": "PAC001-n005",
+   "patient_id": "PAC001",
+   "cuidador": {
+    "relacion": "madre",
+    "nombre": "Carmen García López"
+   },
+   "fecha": "2024-01-18T22:10",
+   "texto": "Hoy ha explotado dos veces por tonterías. Se le ha roto la punta del lápiz y se ha puesto a gritar y llorar como si fuera el fin del mundo. Cualquier detalle mínimo que le frustra y estalla. Intento aplicar lo que nos dijo la psicóloga pero cuando estás al límite es muy difícil.",
+   "ref_items": [
+    22,
+    6
+   ],
+   "ref": {
+    "semana": 2,
+    "fase": "pre_medicacion",
+    "adherencia": "sin_medicacion"
+   }
+  },
+  {
+   "nota_id": "PAC001-n006",
+   "patient_id": "PAC001",
+   "cuidador": {
+    "relacion": "madre",
+    "nombre": "Carmen García López"
+   },
+   "fecha": "2024-01-20T21:25",
+   "texto": "La cena de hoy un caos. Se ha levantado de la silla cinco veces, y eso que le íbamos avisando. Es que no puede ponerle freno al cuerpo. Su padre está perdiendo la paciencia y acabamos discutiendo entre nosotros, que es lo peor.",
+   "ref_items": [
+    30,
+    48
+   ],
+   "ref": {
+    "semana": 2,
+    "fase": "pre_medicacion",
+    "adherencia": "sin_medicacion"
+   }
+  },
+  {
+   "nota_id": "PAC001-n007",
+   "patient_id": "PAC001",
+   "cuidador": {
+    "relacion": "madre",
+    "nombre": "Carmen García López"
+   },
+   "fecha": "2024-01-24T23:35",
+   "texto": "Son casi las doce y Marco acaba de dormirse. Llevaba desde las nueve y media dando vueltas en la cama. Mañana estará hecho polvo para el cole. No entiendo de dónde saca la energía.",
+   "ref_items": [],
+   "ref": {
+    "semana": 3,
+    "fase": "pre_medicacion",
+    "adherencia": "sin_medicacion"
+   }
+  },
+  {
+   "nota_id": "PAC001-n008",
+   "patient_id": "PAC001",
+   "cuidador": {
+    "relacion": "madre",
+    "nombre": "Carmen García López"
+   },
+   "fecha": "2024-01-25T20:15",
+   "texto": "La profesora ha escrito hoy en la agenda que 'el trabajo es descuidado y tiene que revisar antes de entregar'. Los deberes de lengua los entregó sin repasar, con errores de los más tontos, cosas que sabe hacer perfectamente: letras al revés, palabras sin terminar. Le pregunto si ha revisado y me dice que sí, pero está claro que no.",
+   "ref_items": [
+    5,
+    29,
+    42
+   ],
+   "ref": {
+    "semana": 3,
+    "fase": "pre_medicacion",
+    "adherencia": "sin_medicacion"
+   }
+  },
+  {
+   "nota_id": "PAC001-n009",
+   "patient_id": "PAC001",
+   "cuidador": {
+    "relacion": "madre",
+    "nombre": "Carmen García López"
+   },
+   "fecha": "2024-01-28T19:45",
+   "texto": "Hoy Marco no encontraba el estuche que yo misma le había puesto encima de la mesa hace un rato. Se lo dije y ni se acordaba de que se lo había dejado ahí. Su cuarto sigue siendo un campo de batalla, no hay manera de que encuentre nada.",
+   "ref_items": [
+    8,
+    28
+   ],
+   "ref": {
+    "semana": 3,
+    "fase": "pre_medicacion",
+    "adherencia": "sin_medicacion"
+   }
+  },
+  {
+   "nota_id": "PAC001-n010",
+   "patient_id": "PAC001",
+   "cuidador": {
+    "relacion": "madre",
+    "nombre": "Carmen García López"
+   },
+   "fecha": "2024-01-29T18:20",
+   "texto": "Hoy revisión con la Dra. Serrano. Le hemos contado todo y ha decidido que la semana que viene empezamos con el metilfenidato, 10mg por la mañana. Nos ha explicado que los primeros días puede estar algo raro, y que si no come o no duerme la llamemos. Estoy nerviosa, no quiero que se convierta en un niño zombie con la pastilla.",
+   "ref_items": [],
+   "ref": {
+    "semana": 4,
+    "fase": "pre_medicacion",
+    "adherencia": "sin_medicacion"
+   }
+  },
+  {
+   "nota_id": "PAC001-n011",
+   "patient_id": "PAC001",
+   "cuidador": {
+    "relacion": "madre",
+    "nombre": "Carmen García López"
+   },
+   "fecha": "2024-02-01T20:50",
+   "texto": "La maestra me ha contado que en el trabajo en grupo de hoy Marco no paró de interrumpir a los demás, hablaba cuando no le tocaba. Y se enganchó con el tema de los dinosaurios y no había manera de que cambiara al tema del trabajo. Una hora con los dinosaurios.",
+   "ref_items": [
+    24,
+    17
+   ],
+   "ref": {
+    "semana": 4,
+    "fase": "pre_medicacion",
+    "adherencia": "sin_medicacion"
+   }
+  },
+  {
+   "nota_id": "PAC001-n012",
+   "patient_id": "PAC001",
+   "cuidador": {
+    "relacion": "madre",
+    "nombre": "Carmen García López"
+   },
+   "fecha": "2024-02-02T21:30",
+   "texto": "Le está costando muchísimo el grupo nuevo que les han puesto para el trabajo. Quería hacerlo todo a su manera y cuando los compañeros proponían otra forma se negaba. Los niños empezaban a frustrarse con él. Me da mucha pena porque él quiere tener amigos, pero le cuesta tantísimo adaptarse.",
+   "ref_items": [
+    2,
+    11
+   ],
+   "ref": {
+    "semana": 4,
+    "fase": "pre_medicacion",
+    "adherencia": "sin_medicacion"
+   }
+  },
+  {
+   "nota_id": "PAC001-n013",
+   "patient_id": "PAC001",
+   "cuidador": {
+    "relacion": "madre",
+    "nombre": "Carmen García López"
+   },
+   "fecha": "2024-02-05T08:15",
+   "texto": "Primer día con la pastilla. Se negaba a tomarla, decía que le daba asco el sabor. Al final se la hemos puesto en un poco de zumo de naranja y la ha tomado. A ver cómo va el día. Crucemos los dedos.",
+   "ref_items": [],
+   "ref": {
+    "semana": 5,
+    "fase": "inicio_medicacion",
+    "adherencia": "positiva_inicio"
+   }
+  },
+  {
+   "nota_id": "PAC001-n014",
+   "patient_id": "PAC001",
+   "cuidador": {
+    "relacion": "madre",
+    "nombre": "Carmen García López"
+   },
+   "fecha": "2024-02-05T21:30",
+   "texto": "No me lo puedo creer. La profesora me ha dicho que hoy ha estado 'más tranquilo que de costumbre' y que ha terminado una ficha entera. En casa los deberes también han ido mejor, aunque a mitad se ha puesto muy nervioso y lloroso, no sé si era que se le iba el efecto. La atención le dura un rato y luego se apaga. Ha cenado poquísimo, casi no ha tocado el plato.",
+   "ref_items": [
+    12
+   ],
+   "ref": {
+    "semana": 5,
+    "fase": "inicio_medicacion",
+    "adherencia": "positiva_inicio"
+   }
+  },
+  {
+   "nota_id": "PAC001-n015",
+   "patient_id": "PAC001",
+   "cuidador": {
+    "relacion": "madre",
+    "nombre": "Carmen García López"
+   },
+   "fecha": "2024-02-08T20:45",
+   "texto": "Con la pastilla se nota, pero ponerse a hacer los deberes sigue siendo un mundo. Hasta que se sienta pasan veinte minutos de excusas, y concentrarse en la tarea le sigue costando aunque menos que antes.",
+   "ref_items": [
+    50,
+    32
+   ],
+   "ref": {
+    "semana": 5,
+    "fase": "inicio_medicacion",
+    "adherencia": "positiva_inicio"
+   }
+  },
+  {
+   "nota_id": "PAC001-n016",
+   "patient_id": "PAC001",
+   "cuidador": {
+    "relacion": "madre",
+    "nombre": "Carmen García López"
+   },
+   "fecha": "2024-02-13T20:00",
+   "texto": "Nota de la tutora en la agenda: 'algo ha cambiado, está consiguiendo terminar los ejercicios'. En casa ya no hay que decirle cada dos minutos que siga. Eso sí, para EMPEZAR sigue haciendo falta que se lo diga yo, aunque tenga buena disposición no arranca solo.",
+   "ref_items": [
+    38,
+    50
+   ],
+   "ref": {
+    "semana": 6,
+    "fase": "inicio_medicacion",
+    "adherencia": "positiva"
+   }
+  },
+  {
+   "nota_id": "PAC001-n017",
+   "patient_id": "PAC001",
+   "cuidador": {
+    "relacion": "madre",
+    "nombre": "Carmen García López"
+   },
+   "fecha": "2024-02-14T09:10",
+   "texto": "Hoy solo se ha comido media tostada en el desayuno. Lo de la comida me tiene preocupada, desde que toma la pastilla come muchísimo menos.",
+   "ref_items": [],
+   "ref": {
+    "semana": 6,
+    "fase": "inicio_medicacion",
+    "adherencia": "positiva"
+   }
+  },
+  {
+   "nota_id": "PAC001-n018",
+   "patient_id": "PAC001",
+   "cuidador": {
+    "relacion": "madre",
+    "nombre": "Carmen García López"
+   },
+   "fecha": "2024-02-18T22:00",
+   "texto": "El fin de semana sin pastilla ha sido un desastre otra vez. Sábado y domingo como volver al principio, no ha parado en todo el día. Y sin nadie encima no es capaz de ponerse con nada él solo, ni de empezar los deberes del lunes ni de recoger. Todo hay que estar ahí. Supongo que es normal pero choca mucho. Está siendo duro para la familia.",
+   "ref_items": [
+    9,
+    46
+   ],
+   "ref": {
+    "semana": 6,
+    "fase": "inicio_medicacion",
+    "adherencia": "positiva"
+   }
+  },
+  {
+   "nota_id": "PAC001-n019",
+   "patient_id": "PAC001",
+   "cuidador": {
+    "relacion": "madre",
+    "nombre": "Carmen García López"
+   },
+   "fecha": "2024-02-20T21:15",
+   "texto": "Seguimos con el tema de la comida. Apenas come. El pediatra dice que es normal con el metilfenidato pero verle el plato así da pena. Le hemos cambiado el desayuno a algo más contundente antes de la pastilla, a ver si así.",
+   "ref_items": [],
+   "ref": {
+    "semana": 7,
+    "fase": "inicio_medicacion",
+    "adherencia": "positiva"
+   }
+  },
+  {
+   "nota_id": "PAC001-n020",
+   "patient_id": "PAC001",
+   "cuidador": {
+    "relacion": "madre",
+    "nombre": "Carmen García López"
+   },
+   "fecha": "2024-02-22T20:30",
+   "texto": "Hoy Marco me ha contado orgullosísimo que en clase de mates ha levantado la mano y ha esperado su turno para contestar. Él, que siempre hablaba cuando no le tocaba. Le he dicho que es un gran logro y se le iluminó la cara.",
+   "ref_items": [
+    24
+   ],
+   "ref": {
+    "semana": 7,
+    "fase": "inicio_medicacion",
+    "adherencia": "positiva"
+   }
+  },
+  {
+   "nota_id": "PAC001-n021",
+   "patient_id": "PAC001",
+   "cuidador": {
+    "relacion": "madre",
+    "nombre": "Carmen García López"
+   },
+   "fecha": "2024-02-23T21:40",
+   "texto": "Hoy no encontraba el sacapuntas, y ayer el cuaderno de inglés no llegó a casa, se lo dejó en clase. En el cuarto hay ropa por el suelo, papeles, todo mezclado, va dejando un rastro de cosas por donde pasa. Este tema no mejora nada.",
+   "ref_items": [
+    45,
+    53,
+    63,
+    8
+   ],
+   "ref": {
+    "semana": 7,
+    "fase": "inicio_medicacion",
+    "adherencia": "positiva"
+   }
+  },
+  {
+   "nota_id": "PAC001-n022",
+   "patient_id": "PAC001",
+   "cuidador": {
+    "relacion": "madre",
+    "nombre": "Carmen García López"
+   },
+   "fecha": "2024-02-26T19:00",
+   "texto": "Reunión con la tutora, muy positiva. Dice que Marco ha mejorado mucho, que presta más atención, termina los ejercicios y los conflictos con compañeros han bajado. Buena nota en el primer examen de mates del trimestre. Yo con los ojos llorosos en la reunión, para qué negarlo.",
+   "ref_items": [],
+   "ref": {
+    "semana": 8,
+    "fase": "inicio_medicacion",
+    "adherencia": "positiva"
+   }
+  },
+  {
+   "nota_id": "PAC001-n023",
+   "patient_id": "PAC001",
+   "cuidador": {
+    "relacion": "madre",
+    "nombre": "Carmen García López"
+   },
+   "fecha": "2024-02-28T21:10",
+   "texto": "Los deberes los sigue haciendo de cualquier manera, deprisa y con errores de despiste. Hay que recordarle todos los días que revise antes de entregar, él solo no repasa nunca.",
+   "ref_items": [
+    5,
+    29,
+    42
+   ],
+   "ref": {
+    "semana": 8,
+    "fase": "inicio_medicacion",
+    "adherencia": "positiva"
+   }
+  },
+  {
+   "nota_id": "PAC001-n024",
+   "patient_id": "PAC001",
+   "cuidador": {
+    "relacion": "madre",
+    "nombre": "Carmen García López"
+   },
+   "fecha": "2024-03-01T20:20",
+   "texto": "Esta tarde se ha puesto nervioso con una ficha y ha tenido una de sus explosiones, llorando y gritando... y a los cinco minutos como si nada, se le pasó de golpe. Son intensas pero cortas, y mucho menos que antes de la medicación.",
+   "ref_items": [
+    6,
+    43
+   ],
+   "ref": {
+    "semana": 8,
+    "fase": "inicio_medicacion",
+    "adherencia": "positiva"
+   }
+  },
+  {
+   "nota_id": "PAC001-n025",
+   "patient_id": "PAC001",
+   "cuidador": {
+    "relacion": "madre",
+    "nombre": "Carmen García López"
+   },
+   "fecha": "2024-03-06T20:50",
+   "texto": "Esta semana entregó la redacción de las vacaciones y le quedó bastante organizada para ser él. Le ayudé yo a estructurarla, eso sí, porque sus escritos solos son un batiburrillo, pero el contenido era todo suyo.",
+   "ref_items": [
+    21
+   ],
+   "ref": {
+    "semana": 9,
+    "fase": "estabilizacion",
+    "adherencia": "positiva"
+   }
+  },
+  {
+   "nota_id": "PAC001-n026",
+   "patient_id": "PAC001",
+   "cuidador": {
+    "relacion": "madre",
+    "nombre": "Carmen García López"
+   },
+   "fecha": "2024-03-09T19:30",
+   "texto": "Hoy en el parque se ha peleado con su primo. Llevaba una hora con el mismo juego y cuando el primo quiso cambiar, Marco se puso fatal, no aceptaba de ninguna manera hacer otra cosa. Lo de la flexibilidad es lo que más cuesta todavía, cualquier cambio de plan es un drama.",
+   "ref_items": [
+    17,
+    2,
+    49
+   ],
+   "ref": {
+    "semana": 9,
+    "fase": "estabilizacion",
+    "adherencia": "positiva"
+   }
+  },
+  {
+   "nota_id": "PAC001-n027",
+   "patient_id": "PAC001",
+   "cuidador": {
+    "relacion": "madre",
+    "nombre": "Carmen García López"
+   },
+   "fecha": "2024-03-10T21:00",
+   "texto": "Ayer estuvo diez minutos buscando la agenda por toda la casa. Estaba debajo de su abrigo, donde la dejó él mismo al llegar.",
+   "ref_items": [
+    8
+   ],
+   "ref": {
+    "semana": 9,
+    "fase": "estabilizacion",
+    "adherencia": "positiva"
+   }
+  },
+  {
+   "nota_id": "PAC001-n028",
+   "patient_id": "PAC001",
+   "cuidador": {
+    "relacion": "madre",
+    "nombre": "Carmen García López"
+   },
+   "fecha": "2024-03-14T20:40",
+   "texto": "Me ha contado la madre de su compañera de ciencias que en el trabajo por parejas Marco tenía muchas ideas muy chulas pero que a la hora de escribirlas se quedaba bloqueado, no sabía por dónde empezar. Al final ella escribía y él le iba dictando. Tiene muchas ocurrencias pero plasmarlas en papel le cuesta muchísimo.",
+   "ref_items": [
+    23,
+    35
+   ],
+   "ref": {
+    "semana": 10,
+    "fase": "estabilizacion",
+    "adherencia": "positiva"
+   }
+  },
+  {
+   "nota_id": "PAC001-n029",
+   "patient_id": "PAC001",
+   "cuidador": {
+    "relacion": "madre",
+    "nombre": "Carmen García López"
+   },
+   "fecha": "2024-03-17T20:00",
+   "texto": "Descubrimiento de la semana: el temporizador. Le pongo 20 minutos y le digo 'cuando suene hacemos una pausa' y funciona bastante bien. Si no se lo estructuro yo así, se lanza a los deberes sin ningún plan y con las tareas de varios pasos se pierde a la mitad. Hoy además ha comido mejor que en toda la semana pasada.",
+   "ref_items": [
+    7,
+    19
+   ],
+   "ref": {
+    "semana": 10,
+    "fase": "estabilizacion",
+    "adherencia": "positiva"
+   }
+  },
+  {
+   "nota_id": "PAC005-n001",
+   "patient_id": "PAC005",
+   "cuidador": {
+    "relacion": "madre",
+    "nombre": "Ana Castillo Ruiz"
+   },
+   "fecha": "2024-01-08T22:15",
+   "texto": "Diego ha vuelto hoy de casa de su padre y otra vez sin haber tomado la pastilla el fin de semana entero. Su padre sigue sin estar convencido del diagnóstico y cuando está con él no se la da. Llega como si fuera otra persona: impulsivo, disparado, con explosiones por nada.",
+   "ref_items": [
+    10,
+    6
+   ],
+   "ref": {
+    "semana": 1,
+    "fase": "dos_hogares",
+    "adherencia": "adherencia_irregular_interparental"
+   }
+  },
+  {
+   "nota_id": "PAC005-n002",
+   "patient_id": "PAC005",
+   "cuidador": {
+    "relacion": "madre",
+    "nombre": "Ana Castillo Ruiz"
+   },
+   "fecha": "2024-01-10T17:50",
+   "texto": "Hoy era miércoles de su padre y claro, sin pastilla. Desastre en el cole: amonestación. La maestra dice que no podía quedarse en la silla, que se descontrolaba muchísimo más que el resto y que no había manera de frenarlo. Los miércoles alternos son una lotería.",
+   "ref_items": [
+    30,
+    16,
+    48
+   ],
+   "ref": {
+    "semana": 1,
+    "fase": "dos_hogares",
+    "adherencia": "adherencia_irregular_interparental"
+   }
+  },
+  {
+   "nota_id": "PAC005-n003",
+   "patient_id": "PAC005",
+   "cuidador": {
+    "relacion": "madre",
+    "nombre": "Ana Castillo Ruiz"
+   },
+   "fecha": "2024-01-15T21:20",
+   "texto": "He hablado con la psicóloga sobre lo de su padre. Dice que hay que conseguir que vengamos los dos a una sesión juntos. Él sigue con que 'los niños no necesitan pastillas para nada' y que yo le medico en exceso. Es muy frustrante porque yo veo el día y la noche con y sin medicación.",
+   "ref_items": [],
+   "ref": {
+    "semana": 2,
+    "fase": "dos_hogares",
+    "adherencia": "positiva_semana_sin_padre"
+   }
+  },
+  {
+   "nota_id": "PAC005-n004",
+   "patient_id": "PAC005",
+   "cuidador": {
+    "relacion": "madre",
+    "nombre": "Ana Castillo Ruiz"
+   },
+   "fecha": "2024-01-18T20:35",
+   "texto": "Esta semana no ha tocado casa del padre y ha tomado la medicación todos los días. Aun así los deberes cuestan: ponerse a hacerlos es una lucha diaria, la atención se le agota enseguida y si no estoy delante no arranca él solo con nada. Pero al menos hay una base estable.",
+   "ref_items": [
+    50,
+    12,
+    32,
+    9
+   ],
+   "ref": {
+    "semana": 2,
+    "fase": "dos_hogares",
+    "adherencia": "positiva_semana_sin_padre"
+   }
+  },
+  {
+   "nota_id": "PAC005-n005",
+   "patient_id": "PAC005",
+   "cuidador": {
+    "relacion": "madre",
+    "nombre": "Ana Castillo Ruiz"
+   },
+   "fecha": "2024-01-22T13:40",
+   "texto": "Me acaba de llamar la maestra. Diego ha llegado del fin de semana con su padre sin la pastilla y lo ha notado inmediatamente: inquieto, descontrolado, sin retener nada de lo que le decía, se le olvidaba la instrucción a los dos minutos. Me ha preguntado si había pasado algo en casa.",
+   "ref_items": [
+    1,
+    16,
+    28,
+    12
+   ],
+   "ref": {
+    "semana": 3,
+    "fase": "dos_hogares",
+    "adherencia": "adherencia_irregular_interparental"
+   }
+  },
+  {
+   "nota_id": "PAC005-n006",
+   "patient_id": "PAC005",
+   "cuidador": {
+    "relacion": "madre",
+    "nombre": "Ana Castillo Ruiz"
+   },
+   "fecha": "2024-01-23T21:45",
+   "texto": "Hoy Diego me ha dicho una cosa que me ha partido el alma: que los días en casa de papá se siente 'en nube', alocado, que hace cosas sin control y luego no sabe por qué. Él mismo lo nota. He pedido cita con la doctora para hablar de esta situación, no podemos seguir así.",
+   "ref_items": [
+    39
+   ],
+   "ref": {
+    "semana": 3,
+    "fase": "dos_hogares",
+    "adherencia": "adherencia_irregular_interparental"
+   }
+  },
+  {
+   "nota_id": "PAC005-n007",
+   "patient_id": "PAC005",
+   "cuidador": {
+    "relacion": "madre",
+    "nombre": "Ana Castillo Ruiz"
+   },
+   "fecha": "2024-01-30T19:10",
+   "texto": "Hoy la Dra. Vázquez nos ha citado a los dos juntos. Ha sido tensa pero necesaria. Le ha explicado a su padre con datos el impacto del TDAH y de la medicación irregular, y le ha enseñado los informes del colegio de los días con y sin pastilla. Él escuchó. No sé si está convencido, pero escuchó.",
+   "ref_items": [],
+   "ref": {
+    "semana": 4,
+    "fase": "intervencion_familiar",
+    "adherencia": "mejora_interparental"
+   }
+  },
+  {
+   "nota_id": "PAC005-n008",
+   "patient_id": "PAC005",
+   "cuidador": {
+    "relacion": "padre",
+    "nombre": "Javier Moreno Sanz"
+   },
+   "fecha": "2024-02-01T23:05",
+   "texto": "Escribo yo, el padre. La doctora me pidió que anotara lo que veo. Diego ha estado conmigo hoy y le he dado la pastilla, aunque sigo teniendo mis dudas con esto. Lo que sí veo es que le cuesta darse cuenta de cuándo molesta: hoy en el parque insistía en un juego y los otros niños se apartaban de él y él ni cuenta. Tampoco sabe decirme qué se le da bien y qué mal, se cree buenísimo en todo o un desastre total.",
+   "ref_items": [
+    26,
+    13,
+    4
+   ],
+   "ref": {
+    "semana": 4,
+    "fase": "intervencion_familiar",
+    "adherencia": "mejora_interparental"
+   }
+  },
+  {
+   "nota_id": "PAC005-n009",
+   "patient_id": "PAC005",
+   "cuidador": {
+    "relacion": "madre",
+    "nombre": "Ana Castillo Ruiz"
+   },
+   "fecha": "2024-02-05T20:25",
+   "texto": "El lunes ha vuelto de casa de su padre y por primera vez en meses ha llegado BIEN. Tranquilo, con la pastilla tomada, hizo los deberes sin drama. Su padre se la está dando. No está convencido del todo, pero lo está haciendo. La diferencia es brutal. Es lo que necesitábamos.",
+   "ref_items": [],
+   "ref": {
+    "semana": 5,
+    "fase": "intervencion_familiar",
+    "adherencia": "positiva_ambos_hogares"
+   }
+  },
+  {
+   "nota_id": "PAC005-n010",
+   "patient_id": "PAC005",
+   "cuidador": {
+    "relacion": "madre",
+    "nombre": "Ana Castillo Ruiz"
+   },
+   "fecha": "2024-02-08T21:00",
+   "texto": "Con la medicación estable la semana está siendo mucho mejor, pero lo de fondo sigue: ponerse con los deberes él solo, imposible; la concentración se le va a los diez minutos y hay que reconducirle. Al menos ahora es lo mismo todos los días y no una montaña rusa según en qué casa duerma.",
+   "ref_items": [
+    50,
+    9,
+    12,
+    32
+   ],
+   "ref": {
+    "semana": 5,
+    "fase": "intervencion_familiar",
+    "adherencia": "positiva_ambos_hogares"
+   }
+  },
+  {
+   "nota_id": "PAC005-n011",
+   "patient_id": "PAC005",
+   "cuidador": {
+    "relacion": "madre",
+    "nombre": "Ana Castillo Ruiz"
+   },
+   "fecha": "2024-02-13T20:40",
+   "texto": "Nota de la maestra: Diego está siendo constante, ya no hay altibajos los lunes después de estar con su padre. Entre su padre y yo la cosa sigue tensa, pero en lo de la medicación estamos coordinados, que es lo que importa. A Diego se le nota más contento.",
+   "ref_items": [],
+   "ref": {
+    "semana": 6,
+    "fase": "intervencion_familiar",
+    "adherencia": "positiva"
+   }
+  },
+  {
+   "nota_id": "PAC005-n012",
+   "patient_id": "PAC005",
+   "cuidador": {
+    "relacion": "madre",
+    "nombre": "Ana Castillo Ruiz"
+   },
+   "fecha": "2024-02-16T22:20",
+   "texto": "Hoy tarde difícil a pesar de todo. Un cambio de plan de última hora (no pudimos ir a la piscina) y el humor le cambió de golpe: de contento a llorar y gritar en segundos. Cuando se descontrola sigue siendo mucho más intenso que otros niños de su edad, aunque ahora pasa menos veces.",
+   "ref_items": [
+    51,
+    6,
+    16
+   ],
+   "ref": {
+    "semana": 6,
+    "fase": "intervencion_familiar",
+    "adherencia": "positiva"
+   }
+  },
+  {
+   "nota_id": "PAC005-n013",
+   "patient_id": "PAC005",
+   "cuidador": {
+    "relacion": "madre",
+    "nombre": "Ana Castillo Ruiz"
+   },
+   "fecha": "2024-02-17T12:30",
+   "texto": "Esta mañana en el desayuno se ha levantado de la silla mil veces y ha acabado botando por el salón. Los sábados por la mañana, antes de que haga efecto la pastilla, es otro niño. Luego se regula y va bien el resto del día.",
+   "ref_items": [
+    30,
+    1
+   ],
+   "ref": {
+    "semana": 6,
+    "fase": "intervencion_familiar",
+    "adherencia": "positiva"
+   }
+  },
+  {
+   "nota_id": "PAC005-n014",
+   "patient_id": "PAC005",
+   "cuidador": {
+    "relacion": "madre",
+    "nombre": "Ana Castillo Ruiz"
+   },
+   "fecha": "2024-02-20T19:15",
+   "texto": "¡Notas del primer examen del trimestre: un 7 en lengua y un 6 en mates! Para Diego es un logro enorme. Eso sí, mirando los exámenes se ve que sigue perdiendo puntos por despistes tontos, respuestas sin repasar y una presentación bastante desordenada. Pero el avance es innegable.",
+   "ref_items": [
+    29,
+    42,
+    21
+   ],
+   "ref": {
+    "semana": 7,
+    "fase": "estabilizacion",
+    "adherencia": "positiva"
+   }
+  },
+  {
+   "nota_id": "PAC005-n015",
+   "patient_id": "PAC005",
+   "cuidador": {
+    "relacion": "padre",
+    "nombre": "Javier Moreno Sanz"
+   },
+   "fecha": "2024-02-24T21:50",
+   "texto": "Llamé a Ana para decírselo y lo apunto aquí también: este fin de semana he notado el cambio en Diego. La pastilla sí que funciona. Hizo los deberes conmigo el sábado, algo descuidados y a toda prisa, eso sí, pero los hizo. No es fácil para mí reconocer esto.",
+   "ref_items": [
+    5
+   ],
+   "ref": {
+    "semana": 7,
+    "fase": "estabilizacion",
+    "adherencia": "positiva"
+   }
+  },
+  {
+   "nota_id": "PAC005-n016",
+   "patient_id": "PAC005",
+   "cuidador": {
+    "relacion": "madre",
+    "nombre": "Ana Castillo Ruiz"
+   },
+   "fecha": "2024-02-27T20:10",
+   "texto": "Diego ha empezado hoy el taller de robótica de los martes y ha salido encantado. La monitora dice que se le da muy bien y que allí se concentra perfectamente porque le apasiona. Qué diferencia cuando algo le motiva de verdad.",
+   "ref_items": [],
+   "ref": {
+    "semana": 8,
+    "fase": "estabilizacion",
+    "adherencia": "positiva"
+   }
+  },
+  {
+   "nota_id": "PAC005-n017",
+   "patient_id": "PAC005",
+   "cuidador": {
+    "relacion": "madre",
+    "nombre": "Ana Castillo Ruiz"
+   },
+   "fecha": "2024-03-02T20:45",
+   "texto": "Semana tranquila, su padre estaba de viaje y Diego ha estado conmigo todos los días. Lo único de siempre: para cualquier cosa que no le apasione hay que darle el empujón inicial, no toma la iniciativa ni para las cosas que le tocan, y si el objetivo tiene varios pasos (preparar la mochila del taller: coger la caja, el cuaderno, cargar la tablet) se queda a medias si no voy marcando yo los pasos.",
+   "ref_items": [
+    55,
+    9,
+    59,
+    23
+   ],
+   "ref": {
+    "semana": 8,
+    "fase": "estabilizacion",
+    "adherencia": "positiva"
+   }
+  },
+  {
+   "nota_id": "PAC013-n001",
+   "patient_id": "PAC013",
+   "cuidador": {
+    "relacion": "padre",
+    "nombre": "Javier Gil Soto"
+   },
+   "fecha": "2024-01-09T22:30",
+   "texto": "Me han dicho en el cole que Andrés lleva dos partes de comportamiento en una semana: levantarse en mitad de la clase y soltar respuestas sin que le toque. Llevamos desde septiembre con la agenda, las rutinas y el panel de puntos, y la orientadora dice que el progreso es insuficiente para la dificultad que tiene. De momento seguimos sin querer medicación.",
+   "ref_items": [
+    30,
+    24,
+    1
+   ],
+   "ref": {
+    "semana": 1,
+    "fase": "solo_conductual",
+    "adherencia": "no_farmacologico"
+   }
+  },
+  {
+   "nota_id": "PAC013-n002",
+   "patient_id": "PAC013",
+   "cuidador": {
+    "relacion": "padre",
+    "nombre": "Javier Gil Soto"
+   },
+   "fecha": "2024-01-11T21:15",
+   "texto": "Los deberes de hoy, una guerra. Dos horas para media página porque la cabeza se le va cada dos minutos y no hay manera de que mantenga la atención en lo que tiene delante.",
+   "ref_items": [
+    12,
+    32
+   ],
+   "ref": {
+    "semana": 1,
+    "fase": "solo_conductual",
+    "adherencia": "no_farmacologico"
+   }
+  },
+  {
+   "nota_id": "PAC013-n003",
+   "patient_id": "PAC013",
+   "cuidador": {
+    "relacion": "padre",
+    "nombre": "Javier Gil Soto"
+   },
+   "fecha": "2024-01-17T23:00",
+   "texto": "Hoy me he enterado de que le han puesto en la última fila del aula porque molestaba a los compañeros y se descontrolaba. Me ha dolido mucho. El panel de puntos solo funciona si la recompensa es inmediata; en cuanto es para el viernes, nada. Y en casa explota por cualquier pequeñez, hoy por no encontrar el mando.",
+   "ref_items": [
+    10,
+    16,
+    6,
+    14,
+    48
+   ],
+   "ref": {
+    "semana": 2,
+    "fase": "solo_conductual",
+    "adherencia": "no_farmacologico"
+   }
+  },
+  {
+   "nota_id": "PAC013-n004",
+   "patient_id": "PAC013",
+   "cuidador": {
+    "relacion": "padre",
+    "nombre": "Javier Gil Soto"
+   },
+   "fecha": "2024-01-24T22:40",
+   "texto": "Reunión con el psicólogo del centro. Nos ha explicado con datos que la intervención conductual sola se queda corta para el nivel de Andrés. Esta semana otro parte: interrumpe, actúa sin pensar, deja los trabajos de clase a medias y descuidados. Mi marido dice que esperemos un poco más. Yo ya no lo tengo tan claro.",
+   "ref_items": [
+    24,
+    10,
+    5,
+    25
+   ],
+   "ref": {
+    "semana": 3,
+    "fase": "solo_conductual",
+    "adherencia": "no_farmacologico"
+   }
+  },
+  {
+   "nota_id": "PAC013-n005",
+   "patient_id": "PAC013",
+   "cuidador": {
+    "relacion": "padre",
+    "nombre": "Javier Gil Soto"
+   },
+   "fecha": "2024-01-31T20:50",
+   "texto": "Primer suspenso de la vida de Andrés: un 3 en sociales. Ha llegado humillado, sin querer hablar. El examen era largo y dice que se agobió, que no le dio tiempo ni a la mitad aunque él pensaba que iba sobrado, y que cuando quiso darse cuenta ya no se acordaba de lo que había estudiado.",
+   "ref_items": [
+    44,
+    52,
+    28
+   ],
+   "ref": {
+    "semana": 4,
+    "fase": "solo_conductual",
+    "adherencia": "decision_inminente"
+   }
+  },
+  {
+   "nota_id": "PAC013-n006",
+   "patient_id": "PAC013",
+   "cuidador": {
+    "relacion": "padre",
+    "nombre": "Javier Gil Soto"
+   },
+   "fecha": "2024-02-02T21:35",
+   "texto": "Otra tarde perdida con los deberes: empieza, se va, vuelve, no retiene la instrucción. Mi marido y yo lo hemos hablado esta noche y hemos decidido llamar a la Dra. Torres esta semana. Ya está bien de esperar.",
+   "ref_items": [
+    12,
+    32
+   ],
+   "ref": {
+    "semana": 4,
+    "fase": "solo_conductual",
+    "adherencia": "decision_inminente"
+   }
+  },
+  {
+   "nota_id": "PAC013-n007",
+   "patient_id": "PAC013",
+   "cuidador": {
+    "relacion": "padre",
+    "nombre": "Javier Gil Soto"
+   },
+   "fecha": "2024-02-07T19:20",
+   "texto": "Cita con la Dra. Torres. Muy comprensiva, ha puesto en valor los cinco meses de trabajo conductual como base. Le hizo preguntas a Andrés y me llamó la atención que no sabía decirle qué se le da bien y qué mal, ni se da cuenta de cómo lo ven los demás. Empezamos metilfenidato la semana que viene.",
+   "ref_items": [
+    13,
+    4
+   ],
+   "ref": {
+    "semana": 5,
+    "fase": "decision_farmacologica",
+    "adherencia": "decision_tomada"
+   }
+  },
+  {
+   "nota_id": "PAC013-n008",
+   "patient_id": "PAC013",
+   "cuidador": {
+    "relacion": "padre",
+    "nombre": "Javier Gil Soto"
+   },
+   "fecha": "2024-02-12T21:10",
+   "texto": "Primer día con el OROS de 18. Andrés ha llegado del cole diciendo que había terminado TODOS los ejercicios de clase, por primera vez. Nos hemos emocionado un poco, para qué mentir. Ha comido algo menos de lo normal.",
+   "ref_items": [],
+   "ref": {
+    "semana": 6,
+    "fase": "inicio_MTF",
+    "adherencia": "positiva_inicio"
+   }
+  },
+  {
+   "nota_id": "PAC013-n009",
+   "patient_id": "PAC013",
+   "cuidador": {
+    "relacion": "padre",
+    "nombre": "Javier Gil Soto"
+   },
+   "fecha": "2024-02-15T22:00",
+   "texto": "La medicación se nota en el cole pero en casa por la tarde sigue costando: ponerse con los deberes es pelea, se levanta de la silla, está acelerado a última hora. Supongo que a esas horas ya no hace efecto.",
+   "ref_items": [
+    50,
+    30,
+    1
+   ],
+   "ref": {
+    "semana": 6,
+    "fase": "inicio_MTF",
+    "adherencia": "positiva_inicio"
+   }
+  },
+  {
+   "nota_id": "PAC013-n010",
+   "patient_id": "PAC013",
+   "cuidador": {
+    "relacion": "padre",
+    "nombre": "Javier Gil Soto"
+   },
+   "fecha": "2024-02-21T20:30",
+   "texto": "La maestra ha escrito en la agenda: 'este es otro Andrés'. Cero partes esta semana. Los deberes los hace en 45 minutos, antes eran dos horas y media. Todavía los entrega con despistes y sin repasar, y terminar del todo lo que empieza le sigue costando, pero el cambio es de no creérselo.",
+   "ref_items": [
+    5,
+    29,
+    42,
+    25
+   ],
+   "ref": {
+    "semana": 7,
+    "fase": "inicio_MTF",
+    "adherencia": "positiva"
+   }
+  },
+  {
+   "nota_id": "PAC013-n011",
+   "patient_id": "PAC013",
+   "cuidador": {
+    "relacion": "padre",
+    "nombre": "Javier Gil Soto"
+   },
+   "fecha": "2024-02-28T19:45",
+   "texto": "Revisión con la Dra. Torres, muy contenta: dice que la base conductual previa está potenciando la respuesta al metilfenidato. Seguimos con 18 mg. Lo que aún vemos: iniciativa cero, todo hay que arrancárselo, y sigue sin ser muy consciente de sus puntos fuertes y débiles. Mi marido, por cierto, ha cambiado de opinión por completo con la medicación.",
+   "ref_items": [
+    9,
+    55,
+    13
+   ],
+   "ref": {
+    "semana": 8,
+    "fase": "estabilizacion",
+    "adherencia": "positiva"
+   }
+  },
+  {
+   "nota_id": "PAC013-n012",
+   "patient_id": "PAC013",
+   "cuidador": {
+    "relacion": "padre",
+    "nombre": "Javier Gil Soto"
+   },
+   "fecha": "2024-03-13T21:20",
+   "texto": "Hoy le han elegido portavoz del grupo para la presentación de ciencias. Portavoz. A Andrés, al que hace tres meses todos evitaban en los trabajos en grupo. Se me ha hecho un nudo en la garganta cuando me lo ha contado.",
+   "ref_items": [],
+   "ref": {
+    "semana": 10,
+    "fase": "estabilizacion",
+    "adherencia": "positiva"
+   }
+  },
+  {
+   "nota_id": "PAC013-n013",
+   "patient_id": "PAC013",
+   "cuidador": {
+    "relacion": "padre",
+    "nombre": "Javier Gil Soto"
+   },
+   "fecha": "2024-03-27T22:15",
+   "texto": "Andrés está leyendo un libro de aventuras de 120 páginas y lo va a terminar en tres días. Me ha dicho: 'papá, antes no podía concentrarme para leer, ahora sí'. Sin más. Semanas sin apuntar nada aquí porque, sinceramente, no ha habido nada malo que apuntar.",
+   "ref_items": [],
+   "ref": {
+    "semana": 12,
+    "fase": "estabilizacion",
+    "adherencia": "positiva"
+   }
+  },
+  {
+   "nota_id": "PAC017-n001",
+   "patient_id": "PAC017",
+   "cuidador": {
+    "relacion": "madre",
+    "nombre": "Lucía Castro Vidal"
+   },
+   "fecha": "2024-01-08T21:10",
+   "texto": "Llevo un par de días notando algo raro en Samuel: parpadea muchísimo, mucho más de lo normal. Al principio pensé que serían los ojos secos o las pantallas, pero hoy en la cena era constante. Por lo demás sigue igual de inquieto que siempre, con la medicación y todo.",
+   "ref_items": [
+    1
+   ],
+   "ref": {
+    "semana": 1,
+    "fase": "seguimiento_MTF",
+    "adherencia": "alerta_posibles_tics"
+   }
+  },
+  {
+   "nota_id": "PAC017-n002",
+   "patient_id": "PAC017",
+   "cuidador": {
+    "relacion": "madre",
+    "nombre": "Lucía Castro Vidal"
+   },
+   "fecha": "2024-01-10T18:25",
+   "texto": "Hoy la maestra me ha parado a la salida: también ha notado el parpadeo, y además un sonidito con la garganta que hace en clase. En casa también lo hace y yo no le había dado importancia. Lleva dos meses con el metilfenidato. Me estoy empezando a preocupar.",
+   "ref_items": [],
+   "ref": {
+    "semana": 1,
+    "fase": "seguimiento_MTF",
+    "adherencia": "alerta_posibles_tics"
+   }
+  },
+  {
+   "nota_id": "PAC017-n003",
+   "patient_id": "PAC017",
+   "cuidador": {
+    "relacion": "madre",
+    "nombre": "Lucía Castro Vidal"
+   },
+   "fecha": "2024-01-11T20:40",
+   "texto": "Aparte de lo de los tics, tarde normal de deberes: la atención le dura un suspiro, se distrae con cualquier cosa y contesta antes de que termines la pregunta. Lo de siempre, ni mejor ni peor.",
+   "ref_items": [
+    12,
+    32,
+    10
+   ],
+   "ref": {
+    "semana": 1,
+    "fase": "seguimiento_MTF",
+    "adherencia": "alerta_posibles_tics"
+   }
+  },
+  {
+   "nota_id": "PAC017-n004",
+   "patient_id": "PAC017",
+   "cuidador": {
+    "relacion": "madre",
+    "nombre": "Lucía Castro Vidal"
+   },
+   "fecha": "2024-01-15T14:20",
+   "texto": "Los tics van a más. Ahora además del parpadeo mueve el cuello de lado a lado, como sacudiéndolo. Se lo hace sin darse cuenta. Estoy asustada, no sé si es de la medicación.",
+   "ref_items": [],
+   "ref": {
+    "semana": 2,
+    "fase": "evaluacion_tics",
+    "adherencia": "alerta_efectos_secundarios"
+   }
+  },
+  {
+   "nota_id": "PAC017-n005",
+   "patient_id": "PAC017",
+   "cuidador": {
+    "relacion": "madre",
+    "nombre": "Lucía Castro Vidal"
+   },
+   "fecha": "2024-01-15T22:30",
+   "texto": "Esta noche Samuel ha llorado en la cama. Dice que sus compañeros le miran raro por los movimientos y el ruidito. Está angustiado, se molesta por cualquier cosa y tiene el humor cambiado desde hace días, pasa de bien a fatal en un momento. Mañana llamo a la Dra. Andreu a primera hora.",
+   "ref_items": [
+    56,
+    34
+   ],
+   "ref": {
+    "semana": 2,
+    "fase": "evaluacion_tics",
+    "adherencia": "alerta_efectos_secundarios"
+   }
+  },
+  {
+   "nota_id": "PAC017-n006",
+   "patient_id": "PAC017",
+   "cuidador": {
+    "relacion": "madre",
+    "nombre": "Lucía Castro Vidal"
+   },
+   "fecha": "2024-01-16T10:05",
+   "texto": "He llamado a la consulta de la Dra. Andreu y me han dado cita urgente para la semana que viene. La enfermera me ha dicho que mientras tanto sigamos con la pauta normal y que apunte cuándo y cuánto le pasan los tics.",
+   "ref_items": [],
+   "ref": {
+    "semana": 2,
+    "fase": "evaluacion_tics",
+    "adherencia": "alerta_efectos_secundarios"
+   }
+  },
+  {
+   "nota_id": "PAC017-n007",
+   "patient_id": "PAC017",
+   "cuidador": {
+    "relacion": "madre",
+    "nombre": "Lucía Castro Vidal"
+   },
+   "fecha": "2024-01-19T21:00",
+   "texto": "Le he preguntado a Samuel por los tics con cuidado y me dice que él 'los controla cuando quiere'. No es consciente de que se pasa el día parpadeando y carraspeando, ni de cuándo lo hace. Sigue igual de movido, no para quieto ni viendo la tele.",
+   "ref_items": [
+    13,
+    1
+   ],
+   "ref": {
+    "semana": 2,
+    "fase": "evaluacion_tics",
+    "adherencia": "alerta_efectos_secundarios"
+   }
+  },
+  {
+   "nota_id": "PAC017-n008",
+   "patient_id": "PAC017",
+   "cuidador": {
+    "relacion": "madre",
+    "nombre": "Lucía Castro Vidal"
+   },
+   "fecha": "2024-01-23T13:15",
+   "texto": "Salimos ahora de la cita urgente. La Dra. Andreu dice que los tics pueden estar relacionados con el metilfenidato y propone cambiar a atomoxetina. Nos ha avisado de que la atomoxetina tarda 4-6 semanas en hacer efecto completo, así que habrá una temporada de transición complicada. Al menos hay plan.",
+   "ref_items": [],
+   "ref": {
+    "semana": 3,
+    "fase": "evaluacion_tics",
+    "adherencia": "cambio_planificado"
+   }
+  },
+  {
+   "nota_id": "PAC017-n009",
+   "patient_id": "PAC017",
+   "cuidador": {
+    "relacion": "madre",
+    "nombre": "Lucía Castro Vidal"
+   },
+   "fecha": "2024-01-26T20:30",
+   "texto": "Mientras llega el cambio de medicación, Samuel sigue a lo suyo: hoy ha cruzado la calle sin mirar detrás del balón, del susto casi me muero. En clase la maestra dice que está disperso, que la atención le dura muy poco. Y sin parar quieto en toda la tarde.",
+   "ref_items": [
+    10,
+    12,
+    1
+   ],
+   "ref": {
+    "semana": 3,
+    "fase": "evaluacion_tics",
+    "adherencia": "cambio_planificado"
+   }
+  },
+  {
+   "nota_id": "PAC017-n010",
+   "patient_id": "PAC017",
+   "cuidador": {
+    "relacion": "madre",
+    "nombre": "Lucía Castro Vidal"
+   },
+   "fecha": "2024-01-29T21:20",
+   "texto": "Hoy hemos empezado la transición: bajamos el metilfenidato y empezamos la atomoxetina a dosis baja. Los tics de momento siguen igual. La doctora ya nos avisó de que estas semanas serían difíciles. Respira, Lucía.",
+   "ref_items": [],
+   "ref": {
+    "semana": 4,
+    "fase": "transicion_MTF_ATX",
+    "adherencia": "transicion_farmacologica"
+   }
+  },
+  {
+   "nota_id": "PAC017-n011",
+   "patient_id": "PAC017",
+   "cuidador": {
+    "relacion": "madre",
+    "nombre": "Lucía Castro Vidal"
+   },
+   "fecha": "2024-01-31T22:10",
+   "texto": "Se nota que el metilfenidato ya no está al cien por cien. Hoy dos explosiones de ira en una tarde, una por la consola y otra porque no encontraba unas cartas. Se descontrola muchísimo más que sus amigos con estas cosas y no hay manera de que se frene una vez arranca.",
+   "ref_items": [
+    6,
+    16,
+    48
+   ],
+   "ref": {
+    "semana": 4,
+    "fase": "transicion_MTF_ATX",
+    "adherencia": "transicion_farmacologica"
+   }
+  },
+  {
+   "nota_id": "PAC017-n012",
+   "patient_id": "PAC017",
+   "cuidador": {
+    "relacion": "madre",
+    "nombre": "Lucía Castro Vidal"
+   },
+   "fecha": "2024-02-03T19:45",
+   "texto": "Fin de semana movidito. Impulsivo total: coge las cosas sin pedirlas, contesta sin pensar, se ha subido a un muro del parque que no debía. Está claro que estamos en tierra de nadie con la medicación. Aguantando hasta que la nueva haga efecto.",
+   "ref_items": [
+    10,
+    1
+   ],
+   "ref": {
+    "semana": 4,
+    "fase": "transicion_MTF_ATX",
+    "adherencia": "transicion_farmacologica"
+   }
+  },
+  {
+   "nota_id": "PAC017-n013",
+   "patient_id": "PAC017",
+   "cuidador": {
+    "relacion": "madre",
+    "nombre": "Lucía Castro Vidal"
+   },
+   "fecha": "2024-02-06T21:30",
+   "texto": "Primera semana solo con atomoxetina. Conductualmente está peor que con el metilfenidato: hoy en la cena se ha levantado seis veces, ha explotado cuando le he mandado a la ducha y actúa sin pensar constantemente. PERO: los tics han bajado clarísimamente. El parpadeo es mucho menor. Algo es algo.",
+   "ref_items": [
+    30,
+    6,
+    10
+   ],
+   "ref": {
+    "semana": 5,
+    "fase": "transicion_MTF_ATX",
+    "adherencia": "positiva_nueva_medicacion"
+   }
+  },
+  {
+   "nota_id": "PAC017-n014",
+   "patient_id": "PAC017",
+   "cuidador": {
+    "relacion": "madre",
+    "nombre": "Lucía Castro Vidal"
+   },
+   "fecha": "2024-02-09T20:50",
+   "texto": "Sigue revolucionado, se descontrola más que sus compañeros en los cumpleaños y actividades, hoy me lo dijo otra madre con buena intención. La Dra. Andreu insiste en que hay que esperar las 4-6 semanas de la atomoxetina. Paciencia, pero se hace largo.",
+   "ref_items": [
+    16,
+    1
+   ],
+   "ref": {
+    "semana": 5,
+    "fase": "transicion_MTF_ATX",
+    "adherencia": "positiva_nueva_medicacion"
+   }
+  },
+  {
+   "nota_id": "PAC017-n015",
+   "patient_id": "PAC017",
+   "cuidador": {
+    "relacion": "madre",
+    "nombre": "Lucía Castro Vidal"
+   },
+   "fecha": "2024-02-13T21:00",
+   "texto": "Buenas noticias por fin: el parpadeo es mínimo y el sonido de garganta casi ha desaparecido. Samuel está feliz porque sus compañeros ya no le miran. Hoy ha venido contento del cole por primera vez en un mes.",
+   "ref_items": [],
+   "ref": {
+    "semana": 6,
+    "fase": "transicion_MTF_ATX",
+    "adherencia": "positiva"
+   }
+  },
+  {
+   "nota_id": "PAC017-n016",
+   "patient_id": "PAC017",
+   "cuidador": {
+    "relacion": "madre",
+    "nombre": "Lucía Castro Vidal"
+   },
+   "fecha": "2024-02-17T20:15",
+   "texto": "En lo de conducta vamos mejorando poco a poco, pero aún le cuesta: sigue inquieto, a ratos impulsivo, y con los deberes la atención se le va y cuesta que se concentre un rato seguido. La doctora dijo que la eficacia plena tarda, así que seguimos esperando la curva buena.",
+   "ref_items": [
+    1,
+    10,
+    12,
+    32
+   ],
+   "ref": {
+    "semana": 6,
+    "fase": "transicion_MTF_ATX",
+    "adherencia": "positiva"
+   }
+  },
+  {
+   "nota_id": "PAC017-n017",
+   "patient_id": "PAC017",
+   "cuidador": {
+    "relacion": "madre",
+    "nombre": "Lucía Castro Vidal"
+   },
+   "fecha": "2024-02-22T20:40",
+   "texto": "La maestra dice que Samuel está bastante mejor en clase, que se le nota más centrado. La atomoxetina parece que va entrando. Los tics prácticamente han desaparecido. En casa lo que queda es lo de siempre: hay que sentarse con él para que empiece los deberes, solo no arranca, y a mitad se despista.",
+   "ref_items": [
+    9,
+    50,
+    32
+   ],
+   "ref": {
+    "semana": 7,
+    "fase": "ajuste_ATX",
+    "adherencia": "positiva"
+   }
+  },
+  {
+   "nota_id": "PAC017-n018",
+   "patient_id": "PAC017",
+   "cuidador": {
+    "relacion": "madre",
+    "nombre": "Lucía Castro Vidal"
+   },
+   "fecha": "2024-02-29T21:10",
+   "texto": "La atomoxetina funciona. Tics desaparecidos por completo, ni parpadeo ni garganta. En el cole va bien, aunque los trabajos los sigue entregando con descuidos si nadie le dice que repase. Lo único nuevo: está algo más cansado por las tardes, se queda mustio después de merendar. Lo comentaré en la próxima revisión.",
+   "ref_items": [
+    5
+   ],
+   "ref": {
+    "semana": 8,
+    "fase": "ajuste_ATX",
+    "adherencia": "positiva"
+   }
+  },
+  {
+   "nota_id": "PAC022-n001",
+   "patient_id": "PAC022",
+   "cuidador": {
+    "relacion": "madre",
+    "nombre": "Sofía Castellano Díaz"
+   },
+   "fecha": "2024-01-08T22:45",
+   "texto": "Empiezo este diario porque me lo ha pedido el Dr. Vázquez. A Diego le diagnosticaron TDAH hace tres semanas, tiene 14 años. Empezamos con la medicación (OROS 18) pero él se niega en redondo: dice que no está loco y que no piensa tomarse 'eso'. No sé cómo llegar a él.",
+   "ref_items": [],
+   "ref": {
+    "semana": 1,
+    "fase": "resistencia_inicial",
+    "adherencia": "adherencia_irregular_adolescente"
+   }
+  },
+  {
+   "nota_id": "PAC022-n002",
+   "patient_id": "PAC022",
+   "cuidador": {
+    "relacion": "madre",
+    "nombre": "Sofía Castellano Díaz"
+   },
+   "fecha": "2024-01-11T21:30",
+   "texto": "Esta semana solo ha tomado la pastilla dos días de cinco, entre que él no quiere y que yo no siempre estoy para vigilarle. Los días que no la toma se nota muchísimo: no para quieto, es incapaz de estar con los deberes más de cinco minutos y se le va la cabeza a cada rato.",
+   "ref_items": [
+    1,
+    12,
+    32
+   ],
+   "ref": {
+    "semana": 1,
+    "fase": "resistencia_inicial",
+    "adherencia": "adherencia_irregular_adolescente"
+   }
+  },
+  {
+   "nota_id": "PAC022-n003",
+   "patient_id": "PAC022",
+   "cuidador": {
+    "relacion": "madre",
+    "nombre": "Sofía Castellano Díaz"
+   },
+   "fecha": "2024-01-13T23:15",
+   "texto": "Broncaza esta noche por la pastilla. Ha acabado gritando, dando un portazo que ha temblado la casa y contestándome cosas que no venían a cuento, sin pensar lo que decía. Cuando se enciende no hay quien lo pare, es mucho más bestia que otros chavales de su edad. Luego a la media hora vino a pedir perdón.",
+   "ref_items": [
+    6,
+    16,
+    10
+   ],
+   "ref": {
+    "semana": 1,
+    "fase": "resistencia_inicial",
+    "adherencia": "adherencia_irregular_adolescente"
+   }
+  },
+  {
+   "nota_id": "PAC022-n004",
+   "patient_id": "PAC022",
+   "cuidador": {
+    "relacion": "madre",
+    "nombre": "Sofía Castellano Díaz"
+   },
+   "fecha": "2024-01-17T22:00",
+   "texto": "Le he puesto vídeos de deportistas y actores famosos con TDAH a ver si se veía reflejado. Me ha dicho que 'eso no tiene nada que ver' con él. Esta semana ha tomado la medicación cuatro días, algo es algo. Los días sin ella, el mismo cuadro: disperso total y contestando sin pensar.",
+   "ref_items": [
+    12,
+    10
+   ],
+   "ref": {
+    "semana": 2,
+    "fase": "resistencia_inicial",
+    "adherencia": "adherencia_irregular_adolescente"
+   }
+  },
+  {
+   "nota_id": "PAC022-n005",
+   "patient_id": "PAC022",
+   "cuidador": {
+    "relacion": "madre",
+    "nombre": "Sofía Castellano Díaz"
+   },
+   "fecha": "2024-01-20T20:30",
+   "texto": "Hemos hablado con el Dr. Vázquez de la resistencia de Diego. Nos ha recomendado no forzar y trabajar la psicoeducación, que en adolescentes el pulso directo sale mal. Ayer otra explosión por nada, la consola esta vez. Está muy revolucionado en general.",
+   "ref_items": [
+    6,
+    1
+   ],
+   "ref": {
+    "semana": 2,
+    "fase": "resistencia_inicial",
+    "adherencia": "adherencia_irregular_adolescente"
+   }
+  },
+  {
+   "nota_id": "PAC022-n006",
+   "patient_id": "PAC022",
+   "cuidador": {
+    "relacion": "madre",
+    "nombre": "Sofía Castellano Díaz"
+   },
+   "fecha": "2024-01-25T21:40",
+   "texto": "El Dr. Vázquez ha tenido esta semana una sesión a solas con Diego, sin padres. No sé qué hablaron pero salió más tranquilo. Ha tomado la pastilla todos los días. En el instituto sigue igual en lo demás: si nadie le empuja, él solo no se pone con nada.",
+   "ref_items": [
+    55
+   ],
+   "ref": {
+    "semana": 3,
+    "fase": "psicoeducacion",
+    "adherencia": "positiva"
+   }
+  },
+  {
+   "nota_id": "PAC022-n007",
+   "patient_id": "PAC022",
+   "cuidador": {
+    "relacion": "madre",
+    "nombre": "Sofía Castellano Díaz"
+   },
+   "fecha": "2024-02-01T23:20",
+   "texto": "Hoy Diego ha hecho algo que no me esperaba: ha buscado información sobre el TDAH en internet por su cuenta y ha venido a contármelo. Dice que lo que leía 'sonaba a él': lo de no darse cuenta de cuándo molesta a la gente, lo de no saber en qué es bueno. Que lo diga él mismo es un paso enorme.",
+   "ref_items": [
+    26,
+    13
+   ],
+   "ref": {
+    "semana": 4,
+    "fase": "psicoeducacion",
+    "adherencia": "positiva"
+   }
+  },
+  {
+   "nota_id": "PAC022-n008",
+   "patient_id": "PAC022",
+   "cuidador": {
+    "relacion": "madre",
+    "nombre": "Sofía Castellano Díaz"
+   },
+   "fecha": "2024-02-05T21:00",
+   "texto": "Diego ha decidido 'probar en serio' durante un mes. Son sus palabras exactas. Pastilla todos los días sin que yo diga nada. Hoy el profesor de historia le ha dicho que ha participado mucho en clase y él estaba sorprendido de sí mismo.",
+   "ref_items": [],
+   "ref": {
+    "semana": 5,
+    "fase": "inicio_real",
+    "adherencia": "positiva"
+   }
+  },
+  {
+   "nota_id": "PAC022-n009",
+   "patient_id": "PAC022",
+   "cuidador": {
+    "relacion": "madre",
+    "nombre": "Sofía Castellano Díaz"
+   },
+   "fecha": "2024-02-09T20:45",
+   "texto": "La medicación va haciendo su parte pero los hábitos no vienen solos: para ponerse a estudiar sigue necesitando que se lo recuerde tres veces, iniciativa cero, y en cuanto lleva un rato la concentración se le escapa. Roma no se hizo en un día, supongo.",
+   "ref_items": [
+    9,
+    55,
+    12,
+    32
+   ],
+   "ref": {
+    "semana": 5,
+    "fase": "inicio_real",
+    "adherencia": "positiva"
+   }
+  },
+  {
+   "nota_id": "PAC022-n010",
+   "patient_id": "PAC022",
+   "cuidador": {
+    "relacion": "madre",
+    "nombre": "Sofía Castellano Díaz"
+   },
+   "fecha": "2024-02-14T19:30",
+   "texto": "Un 7 en el examen de historia, la asignatura que más odia. Ha llegado a casa y me lo ha puesto delante: 'igual sí que funciona'. Ahí supe que íbamos por buen camino. Mirando el examen, eso sí: dos fallos eran despistes de no repasar, respuestas a medio terminar. Pero un 7.",
+   "ref_items": [
+    29,
+    42,
+    5
+   ],
+   "ref": {
+    "semana": 6,
+    "fase": "inicio_real",
+    "adherencia": "positiva"
+   }
+  },
+  {
+   "nota_id": "PAC022-n011",
+   "patient_id": "PAC022",
+   "cuidador": {
+    "relacion": "madre",
+    "nombre": "Sofía Castellano Díaz"
+   },
+   "fecha": "2024-02-22T21:15",
+   "texto": "Revisión con el Dr. Vázquez. Diego entró solo al despacho y me pidió que esperara fuera. Me tuve que aguantar, claro. El doctor me dijo después que está procesando muy bien el diagnóstico, que cada vez entiende mejor cómo funciona él mismo, qué se le da bien y qué le cuesta.",
+   "ref_items": [
+    13
+   ],
+   "ref": {
+    "semana": 7,
+    "fase": "inicio_real",
+    "adherencia": "positiva"
+   }
+  },
+  {
+   "nota_id": "PAC022-n012",
+   "patient_id": "PAC022",
+   "cuidador": {
+    "relacion": "madre",
+    "nombre": "Sofía Castellano Díaz"
+   },
+   "fecha": "2024-02-27T20:20",
+   "texto": "Notas del primer trimestre: dos bienes y dos notables. El año pasado por estas fechas llevaba cuatro suspensos. Sus amigos no saben que toma medicación y él no quiere contarlo todavía. Respeto su decisión, es suya.",
+   "ref_items": [],
+   "ref": {
+    "semana": 8,
+    "fase": "estabilizacion",
+    "adherencia": "positiva"
+   }
+  },
+  {
+   "nota_id": "PAC022-n013",
+   "patient_id": "PAC022",
+   "cuidador": {
+    "relacion": "madre",
+    "nombre": "Sofía Castellano Díaz"
+   },
+   "fecha": "2024-03-01T21:50",
+   "texto": "Que conste que no todo es perfecto: los trabajos los sigue entregando con errores tontos que vería si repasara una sola vez, y estudiar por adelantado, nada — todo a última hora y con la cabeza yéndosele a ratos. Lo apunto para contárselo al doctor en la próxima.",
+   "ref_items": [
+    29,
+    42,
+    32
+   ],
+   "ref": {
+    "semana": 8,
+    "fase": "estabilizacion",
+    "adherencia": "positiva"
+   }
+  },
+  {
+   "nota_id": "PAC022-n014",
+   "patient_id": "PAC022",
+   "cuidador": {
+    "relacion": "madre",
+    "nombre": "Sofía Castellano Díaz"
+   },
+   "fecha": "2024-03-07T22:10",
+   "texto": "Diego se ha montado él solo un sistema de post-its de colores en su mesa para organizar los trabajos del instituto. Nadie le dijo nada, lo diseñó él. Precisamente él, que siempre ha hecho los trabajos sin ningún plan, que se pierde con los largos y que nunca da los pasos para llegar a una meta si no se los marcas. Me quedé mirándolo sin decir nada para no gafarlo.",
+   "ref_items": [
+    7,
+    19,
+    59
+   ],
+   "ref": {
+    "semana": 9,
+    "fase": "estabilizacion",
+    "adherencia": "positiva"
+   }
+  },
+  {
+   "nota_id": "PAC022-n015",
+   "patient_id": "PAC022",
+   "cuidador": {
+    "relacion": "madre",
+    "nombre": "Sofía Castellano Díaz"
+   },
+   "fecha": "2024-03-13T20:35",
+   "texto": "Revisión del mes 3. El Dr. Vázquez muy satisfecho. Dice que la resistencia inicial de Diego fue en realidad su manera de elaborar el diagnóstico, y que eso ha dado una adherencia más sólida que la de muchos pacientes que aceptan a la primera. Quién nos lo iba a decir en enero.",
+   "ref_items": [],
+   "ref": {
+    "semana": 10,
+    "fase": "estabilizacion",
+    "adherencia": "positiva"
+   }
+  }
+ ]
+}
