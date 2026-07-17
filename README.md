@@ -29,7 +29,9 @@ no se compara contra un ground truth.
 ## Estructura del proyecto
 
 ```
-├── anotador.ipynb                  # EL cuaderno: nota → anotación con evidencia
+├── flujo_A_catalogo.ipynb          # 1 llamada/nota: catálogo completo (63 ítems)
+├── flujo_B_item_a_item.ipynb       # 63 llamadas/nota: ítem a ítem (sí/no + cita)
+├── flujo_C_por_escala.ipynb        # 9 llamadas/nota: una por escala ejecutiva
 ├── comparacion_experimentos.ipynb  # compara experimentos (no llama al modelo)
 ├── instrumentos/
 │   └── brief2.json                 # el instrumento BRIEF-2 (63 ítems, 9 escalas)
@@ -49,37 +51,47 @@ Los cuadernos son **autocontenidos**: no hay paquete de Python que importar.
 Todo lo que usan (lectura de la BD, prompts, backend, verificación, guardado)
 está dentro, y se leen de arriba abajo.
 
-## El cuaderno `anotador.ipynb`
+## Los cuadernos de flujo (la ablación A/B/C)
 
-1. **Parámetros** — una sola celda con todo lo configurable:
+La pregunta que responden: **¿cómo hay que estructurar el contexto para que
+el modelo anote de forma estable, y a qué coste?** Los tres flujos hacen la
+misma tarea (nota → ítems con evidencia) variando solo la forma de presentar
+el instrumento al modelo:
+
+| Flujo | Llamadas/nota | Contexto por llamada | Ventaja | Riesgo |
+|-------|---------------|----------------------|---------|--------|
+| **A** catálogo | 1 | Los 63 ítems a la vez | Barato | Falsos negativos, citas de memoria |
+| **B** ítem a ítem | 63 | Un solo ítem (sí/no + cita) | Tarea mínima, trazabilidad total (negativos incluidos) | 63× coste |
+| **C** por escala | 9 | Los 4-9 ítems de una escala | Equilibrio contexto/coste | Ids fuera de escala (se descartan y quedan en la traza) |
+
+**Común a los tres** (decisiones de la reunión de dirección):
+
+- El LLM **solo produce ítems** `{id, evidencia, justificacion}`. Las escalas
+  afectadas y el nivel de alerta se **derivan de forma determinista** con las
+  `reglas_coherencia` del instrumento (alto ≥ 4 ítems, moderado ≥ 2): menos
+  superficie de alucinación, más auditable.
+- **Un solo paciente por ejecución**, sin listas.
+- La **evidencia se verifica automáticamente** contra la nota (¿la cita
+  existe literalmente?): la métrica `evidencia_ok` detecta alucinaciones sin
+  revisión humana.
+- Cada fila de `experimento` es la anotación completa de una nota en una
+  repetición; en B y C la traza de todas las llamadas (incluidos negativos y
+  descartes) queda en `respuesta_cruda`. `latencia_s` es el coste total por
+  nota, comparable entre flujos.
+
+La celda de parámetros de los tres es idéntica:
 
 ```python
-NOTAS        = None         # None = todas las notas; o lista de id_entrada
-PACIENTES    = None         # None = todos; o lista: ["PAC001", "PAC003"]
-MUESTRA      = 10           # nº máximo de notas a anotar
+PACIENTE     = "PAC001"     # un solo paciente por ejecución
+NOTAS        = None         # None = todas sus notas; o lista de id_entrada
+MUESTRA      = 4            # nº máximo de notas
 REPETICIONES = 3            # veces que se anota cada nota
 TEMPERATURA  = 0.7
 MODELO       = "gemma4:e4b"
 ```
 
-2. **Datos** — las notas de los cuidadores, con el contexto del paciente. La
-   unidad es la nota: cadencia irregular (varias una semana, ninguna otra).
-3. **Esquema de salida** — el contrato Pydantic: cada ítem es un objeto
-   `{id, evidencia, justificacion}`.
-4. **Prompts** — construidos desde `brief2.json`; exigen cita literal y
-   prohíben incluir ítems sin evidencia citable.
-5. **Backend** — LangChain con `with_structured_output(method="json_schema")`:
-   el esquema se impone al decodificar.
-6. **Verificación de evidencia** — ¿la cita existe literalmente en la nota?
-   (normalizando mayúsculas, tildes y espacios).
-7. **Una anotación de ejemplo** — con cada evidencia marcada `OK`/`??`.
-8. **El experimento** — notas × repeticiones → tabla `experimento`.
-9. **Resultados** — formato válido, acuerdo del nivel entre repeticiones,
-   evidencia verificada media y latencia.
-
-Cada fila guarda también `respuesta_cruda` (salida exacta del modelo) para
-auditoría, `items_detalle` (los ítems con evidencia y justificación) y
-`evidencia_ok` (fracción de evidencias verificadas).
+> Coste del flujo B: con 4 notas × 3 repeticiones son 756 llamadas al modelo.
+> El cuaderno lo estima antes de lanzar.
 
 Para relanzar un experimento: borrar filas con el mismo `codigo` o cambiar el
 código antes de ejecutar de nuevo.
