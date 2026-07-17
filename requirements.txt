@@ -1,13 +1,9 @@
 # Prototipo de anotación clínica con LLM (TDAH / BRIEF-2)
 # Python 3.12 · entorno: .venv
 
-requests>=2.32          # cuadernos 01 y 03 (API de Ollama)
 pandas>=2.2             # lectura de la BD y tablas de resultados
-matplotlib>=3.8         # gráficos del cuaderno 05
-pydantic>=2.10          # esquema de la anotación (cuadernos 02, 03 y 04)
-
-langchain-ollama>=1.1   # solo cuaderno 02
-instructor>=1.15        # solo cuaderno 04
-openai>=2.0             # cliente OpenAI-compatible usado por instructor
+matplotlib>=3.8         # gráficos del cuaderno de comparación
+pydantic>=2.10          # el contrato de salida (Anotacion / ItemDetectado)
+langchain-ollama>=1.1   # backend de salida estructurada (json_schema)
 
 ipykernel>=7.0          # ejecutar los cuadernos

@@ -92,28 +92,31 @@ CREATE TABLE IF NOT EXISTS referencia_sintetica (
 );
 
 
--- experimento: resultados de los cuadernos 01-04. Cada fila es una anotación
--- producida por el modelo, identificada por un código de experimento para
--- poder comparar configuraciones entre sí (cuaderno 05).
+-- experimento: resultados del cuaderno anotador. Cada fila es una anotación
+-- producida por el modelo sobre una nota del cuidador, identificada por un
+-- código de experimento para poder comparar configuraciones entre sí
+-- (cuaderno comparacion_experimentos).
 CREATE TABLE IF NOT EXISTS experimento (
     id                INTEGER PRIMARY KEY,
-    codigo            TEXT NOT NULL,      -- código del experimento (p. ej. directo-s1-t0.7-20260712)
+    codigo            TEXT NOT NULL,      -- código del experimento (p. ej. anotador-evidencia-t0.7-20260717)
     creada_en         TEXT NOT NULL,
-    backend           TEXT NOT NULL,      -- directo | langchain | tool_calling | instructor
+    backend           TEXT NOT NULL,      -- langchain (elección justificada en la rama fase1-backends)
     modelo            TEXT NOT NULL,
     temperatura       REAL NOT NULL,
-    semana            INTEGER,
+    semana            INTEGER,            -- legado de la fase 1; el anotador por notas guarda NULL
     id_paciente       TEXT,
-    id_entrada        INTEGER,
+    id_entrada        INTEGER,            -- la nota anotada
     repeticion        INTEGER,
-    formato_ok        INTEGER,            -- 0/1: la salida fue JSON válido
-    items_detectados  TEXT,               -- JSON: [int]
+    formato_ok        INTEGER,            -- 0/1: la salida fue válida
+    items_detectados  TEXT,               -- JSON: [int] (ids, para compatibilidad)
     escalas_afectadas TEXT,               -- JSON: [str]
     nivel_alerta      TEXT,
     nota_clinica      TEXT,
-    justificacion     TEXT,
+    justificacion     TEXT,               -- legado; la justificación va ahora por ítem
     latencia_s        REAL,
-    respuesta_cruda   TEXT                -- texto bruto del modelo (auditoría)
+    respuesta_cruda   TEXT,               -- salida bruta del modelo (auditoría)
+    items_detalle     TEXT,               -- JSON: [{id, evidencia, justificacion}]
+    evidencia_ok      REAL                -- fracción de ítems con evidencia literal en la nota
 );
 
 CREATE INDEX IF NOT EXISTS idx_experimento_codigo ON experimento(codigo);
