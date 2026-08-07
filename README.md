@@ -79,22 +79,18 @@ el instrumento al modelo:
   descartes) queda en `respuesta_cruda`. `latencia_s` es el coste total por
   nota, comparable entre flujos.
 
-La celda de parámetros de los tres es idéntica:
+Los parámetros viven en celdas del cuaderno (§1), en orden:
 
-```python
-PACIENTE     = "PAC001"     # un solo paciente por ejecución
-NOTAS        = None         # None = todas sus notas; o lista de id_entrada
-MUESTRA      = 4            # nº máximo de notas
-REPETICIONES = 3            # veces que se anota cada nota
-TEMPERATURA  = 0.7
-MODELO       = "gemma4:e4b"
-```
+1. **Imports**
+2. **Parámetros fijos** — versión, paciente, notas, reps, rejilla modelo×T, `CORRIDA_ACTIVA`
+3. **Infra y código** — BD, Ollama, backend + `codigo_experimento()`
 
-> Coste del flujo B: con 4 notas × 3 repeticiones son 756 llamadas al modelo.
-> El cuaderno lo estima antes de lanzar.
+El código queda: `flujoA-v2-PAC001-gemma4_e4b-t0.7-20260805`.
 
-Para relanzar un experimento: borrar filas con el mismo `codigo` o cambiar el
-código antes de ejecutar de nuevo.
+**Notas:** `IDS_NOTAS` = ids concretos; `MAX_NOTAS` = tope (piloto = 4).
+PAC001 tiene 29 notas; con 4 × 3 reps el flujo B son 756 llamadas.
+
+Para limpiar: `python3 datos/limpiar_experimentos.py` (o `--flujo A` / `--codigo ...`).
 
 ## El cuaderno `comparacion_experimentos.ipynb`
 

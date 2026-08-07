@@ -1,0 +1,2 @@
+codigo,n_total,n_formato_ok,n_fallo_tecnico,tasa_fallo_formato,ids_fallo,nota
+flujoA-v2-PAC001-gemma4_e4b-t0.2-20260807,60,56,4,0.0667,"37,43,51,53",Politica antigua (sin format=json / sin reintentos / sin done_reason). Excluir de sensibilidad.
